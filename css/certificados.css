@@ -1,0 +1,137 @@
+*{  margin: 0;
+	padding: 0;
+	text-decoration: none;
+} 
+body{
+	background: rgb(56, 53, 53);
+}
+
+ul{
+	background: black;
+	overflow: hidden; 
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	width: 100%;
+	
+} 
+
+li{
+	float: left;
+} 
+
+li a, .dropbtn{
+	display: inline-block;
+	color: white;
+	padding: 14px  16px;
+	text-align: center;
+	border-radius: 10px;
+	text-transform: uppercase;
+} 
+
+li a:hover, .dropdown:hover .dropbtn{
+	color: whitesmoke;
+	background:  rgb(62, 202, 6);
+	box-shadow: 1px 2px 30px 1px rgb(94, 255, 0);
+}
+
+li .dropdown{
+	display: inline-block;
+} 
+
+.dropdown-content{
+	position: absolute;
+	background: white;
+	width: 150px;
+	display: none;
+	border-radius: 10px;
+	background: rgb(56, 53, 53); 
+	overflow: auto; 
+	height: 40%;
+} 
+
+.dropdown-content a{
+	color: rgb(62, 202, 6);
+	display: block;
+	text-align: left;
+	border: 1px solid rgb(62, 202, 6); 
+	background: black;margin: 5px; 
+	text-align: center; 
+	font-size: 12px;
+} 
+
+.dropdown-content:hover{
+	color: white;
+}
+.dropdown:hover .dropdown-content{
+	display: block;
+}  
+
+.certificados{
+position: relative;
+width: 45.7%;
+height:auto; 
+background: rgb(56, 53, 53);
+margin-top: 4%; 
+float: right; 
+right: 27%;
+}  
+.certificados img{
+	margin: 30px;
+	display: block; 
+	border: 4px groove rgb(136, 132, 132);
+} 
+
+.suba{ 
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+	align-content: center;
+	background: greenyellow;
+	color: white;
+	width: 80px;
+	height: 80px;
+	position: fixed;
+	bottom: 0;
+	right:0;
+	border-radius: 50%;
+	background-image: radial-gradient(rgb(196, 210, 214),rgb(13, 172, 66)) ;
+
+} 
+.suba:hover{
+	color: whitesmoke;
+	background:  rgb(62, 202, 6);
+	box-shadow: 1px 2px 30px 1px rgb(94, 255, 0);
+}
+
+.suba a{
+	text-transform: uppercase;
+	color:black;
+} 
+.suba a:hover{
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/* Smartphones (600px para baixo) */
+@media only screen and (max-width: 600px) {}
+
+/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+@media only screen and (min-width: 600px) {}
+
+/*Dispostivos Médios (Tablets deitados, 768px para cima) */
+@media only screen and (min-width: 768px){} 
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media only screen and (min-width: 992px){} 
+
+/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+@media only screen and (min-width: 1200px){} 

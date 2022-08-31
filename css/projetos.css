@@ -1,0 +1,119 @@
+*{
+   padding: 0;
+   margin: 0;
+   text-decoration: none;
+   list-style-type: none;
+}  
+
+body{
+	background: rgb(56, 53, 53); 
+	color: white;
+	
+}
+
+ul{ 
+	background: linear-gradient(90deg, rgba(0,0,1,1) 0%, rgba(0,0,0,1) 41%, rgba(0,255,76,1) 100%);
+	overflow: hidden; 
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	width: 100%;
+	
+} 
+
+li{
+	float: left;
+} 
+
+li a, .dropbtn{
+	display: inline-block;
+	color: white;
+	padding: 14px  16px;
+	text-align: center;
+	border-radius: 10px;
+	text-transform: uppercase;
+} 
+
+li a:hover, .dropdown:hover .dropbtn{
+	color: whitesmoke;
+	background:  rgb(62, 202, 6);
+	box-shadow: 1px 2px 30px 1px rgb(94, 255, 0);
+}
+
+li .dropdown{
+	display: inline-block;
+} 
+
+.dropdown-content{
+	position: absolute;
+	background: white;
+	width: 150px;
+	display: none;
+	border-radius: 10px;
+	background: rgb(56, 53, 53); 
+	overflow: auto; 
+	height: 40%;
+} 
+
+.dropdown-content a{
+	color: rgb(62, 202, 6);
+	display: block;
+	text-align: left;
+	border: 1px solid rgb(62, 202, 6); 
+	background: black;margin: 5px; 
+	text-align: center; 
+	font-size: 12px;
+} 
+
+.dropdown-content:hover{
+	color: white;
+}
+.dropdown:hover .dropdown-content{
+	display: block;
+}  
+
+.projetos{
+	
+	display: flex;
+    flex-direction: column; 
+	align-content: center; 
+	justify-content: center;
+} 
+figure{ 
+	
+	text-align: center;
+}
+
+.descricao{
+	background: linear-gradient(90deg, rgba(0,0,1,1) 0%, rgba(0,0,0,1) 41%, rgba(68,15,138,1) 100%);
+	text-align: justify;
+	width: 61%; 
+	margin: 0 auto;
+	font-size: larger; 
+	border: 4px groove rgb(136, 132, 132);
+	border-radius: 10px; 
+	padding: 8px;
+	 
+} 
+
+
+
+
+
+
+/* Smartphones (600px para baixo) */
+@media only screen and (max-width: 600px) {
+	
+}
+
+/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+@media only screen and (min-width: 600px) {}
+
+/*Dispostivos Médios (Tablets deitados, 768px para cima) */
+@media only screen and (min-width: 768px){} 
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media only screen and (min-width: 992px){} 
+
+/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+@media only screen and (min-width: 1200px){} 

@@ -1,0 +1,295 @@
+*{
+  padding: 0;
+  margin: 0; 
+  text-decoration: none;
+   
+} 
+
+body{ 
+  width: 100%;
+  background: rgb(43, 40, 40);
+}
+table{ 
+  overflow: auto;
+  position: absolute;
+  display: inline-flexbox;
+  width: 100%;
+  height: 100%;
+  color: rgb(94, 255, 0);
+} 
+th {
+  font-size: larger;
+  border-radius: 7%;
+  background:  rgba(78, 82, 80, 0.842);
+}
+
+th,
+  td{ 
+    
+    padding: 6px;
+  } 
+
+ 
+  tbody tr:nth-child(even) {
+    background-color: rgba(78, 82, 80, 0.842);
+  } 
+  
+  tbody tr:hover {
+    font-weight: bold;
+    cursor: default; 
+    box-shadow: 1px 2px 30px 1px rgb(94, 255, 0); 
+    color: whitesmoke;
+    background:  rgb(62, 202, 6);
+    box-shadow: 1px 2px 30px 1px rgb(94, 255, 0); 
+  } 
+
+body{
+  position: absolute;
+}
+.container{
+  display: inline-block;
+  background-image: url('../img/background.jfif');
+  width: 100%;
+  height: 400px;
+  position: relative;
+  border: 5px outset rgb(138, 132, 132);
+
+}
+.contato{
+  border: 1px solid rgb(94, 255, 0); 
+  width: 30%;
+  height: 250px;
+display: inline-block;
+ background: black;
+ position: absolute;
+bottom: 35%;
+right: 3%;
+top:15%;
+ 
+}
+
+.perfil{
+  width: 30%;
+  height: 250px;
+display: inline-block;
+background:black;
+position: absolute;
+bottom:35%;
+border: 1px solid rgb(94, 255, 0); 
+top:15%; 
+left:3%;
+
+
+}
+
+.perfil p{
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  margin-left: 23%;
+  font-size: larger;
+  color: rgb(94, 255, 0); 
+}
+img{
+  display: inline-block;
+  height: 65%;
+  width: 42%;
+  position: absolute;
+  border-radius: 50%;
+  margin-left: 30%;
+  margin-top: 5%;
+}
+.tecnologias{
+  overflow: auto;
+  width: 30%;
+  height: 250px;
+display: inline-block;
+background: black;
+position: absolute;
+bottom: 35%;
+left: 35%;
+border: 1px solid rgb(94, 255, 0); 
+top:15%;
+
+
+}  
+
+.waths{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  background: greenyellow;
+  color: black;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  bottom: 0;
+  right:0;
+  border-radius: 50%;
+  background-image: radial-gradient(rgb(196, 210, 214),rgb(13, 172, 66)) ;
+} 
+
+ .waths:hover { 
+  color: whitesmoke;
+	background:  rgb(62, 202, 6);
+	box-shadow: 1px 2px 30px 1px rgb(94, 255, 0);
+} 
+
+.waths a{
+  color: black;
+  text-transform: uppercase;
+}
+
+.waths a:hover{
+   color: white;
+}
+/* Style do div formacao academica*/
+.formacao { 
+  overflow: auto;
+  margin-left: 18%;
+  margin-top: 10%;
+  display: inline-block;
+  height: 400px;
+  width: 64%;
+  background: rgba(7, 8, 8, 0.842); 
+  color: rgb(94, 255, 0); 
+  border: 1px solid rgb(94, 255, 0); 
+  padding: 5px;
+
+} 
+
+.formacao ul{
+ 
+  margin-top: 20px;
+  background: rgb(43, 40, 40);
+}
+
+.formacao ul li{ 
+padding: 11px;
+text-transform: uppercase;
+list-style: none;
+} 
+
+.formacao p{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+ .formacao ul li:nth-child(even) {
+  background-color: rgba(7, 8, 8, 0.842);
+} 
+
+.formacao ul li:hover{
+  font-weight: bolder;
+  cursor: context-menu;
+  text-decoration: underline;
+} 
+
+/* Style Experiencia*/
+.experiencia { 
+  overflow: auto;
+  margin-left: 18%;
+  margin-top: 9%;
+  margin-bottom: 20%;
+  display: inline-block;
+  height: 250px;
+  width: 64%;
+  background: rgba(7, 8, 8, 0.842); 
+  color: rgb(94, 255, 0); 
+  border: 1px solid rgb(94, 255, 0); 
+  padding: 5px;
+
+} 
+
+.experiencia ul{ 
+  
+  margin-top: 20px;
+  background: rgb(43, 40, 40);
+}
+
+.experiencia ul li{ 
+list-style: none;
+padding: 11px;
+text-transform: uppercase;
+
+} 
+
+.experiencia p{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+ .experiencia ul li:nth-child(even) {
+  background-color: rgba(7, 8, 8, 0.842);
+} 
+
+.experiencia ul li:hover{
+  text-decoration: underline;
+ font-weight: bolder;
+  cursor: context-menu;
+} 
+/* Style do NavBar*/
+nav{
+  height: 80px;
+  width: 100%;
+  background: rgb(43, 40, 40);
+
+}
+nav ul{ 
+  float: right;
+  margin-right: 20px;
+  
+} 
+
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+ 
+.logo{
+  color: #fff;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+
+nav ul li a{
+  color: #fff;
+  font-size: 17px;
+  padding: 7px 13px; 
+  border-radius: 7px;
+  text-transform: uppercase;
+
+} 
+
+nav ul li a:hover{
+background: #1d075f;
+transition: .5s;
+}  
+
+/* Rodapé*/
+h4{
+  text-align: center;
+  color:rgb(94, 255, 0); 
+} 
+
+/* Smartphones (600px para baixo) */
+@media only screen and (max-width: 600px) {}
+
+/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+@media only screen and (min-width: 600px) {}
+
+/*Dispostivos Médios (Tablets deitados, 768px para cima) */
+@media only screen and (min-width: 768px){} 
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media only screen and (min-width: 992px){} 
+
+/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+@media only screen and (min-width: 1200px){} 

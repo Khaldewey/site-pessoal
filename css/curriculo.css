@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2? family= DynaPuff & display=swap');
+body {
+    padding: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(2, 2, 2);
+    color: rgb(94, 255, 0); 
+    padding: 20px;
+    
+  }
+  
+  img {
+    height: 150px;
+    border-radius: 100px;
+  }
+
+  h1, h2 {
+    text-align: center;
+    /*border-bottom: 1px solid rgb(94, 255, 0); */
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  table, th {
+    margin-left: 200px;
+    background: rgb(63, 10, 10);
+    border-radius: 10px;
+  }
+  
+  th,
+  td {
+    padding: 6px;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: rgba(78, 82, 80, 0.842);
+  }
+  
+  tbody tr:hover {
+    font-weight: bold;
+    cursor: default; 
+    font-size: 25px;
+  }
+  
+  .title {
+   color: rgb(94, 255, 0);
+  }
+  
+  .author {
+    text-align: left;
+    font-style: italic;
+  } 
+
+  ul {
+    border-top: 1px solid rgb(94, 255, 0);
+    font-size: larger;
+  } 
+
+  #header {
+    padding-left: 35%;
+    height: 35%;
+    background-color: black;
+    border-radius: 10px;
+    padding-bottom: 20px;
+  }
+  
+  #perfil{
+    position: absolute;
+    width: 160px; 
+    padding-left: 1%;
+    border-radius: 10px ;
+    padding-top: 10px ;
+    background: rgb(63, 10, 10);
+
+  } 
+
+  #perfil h2{
+    margin-left:9%;
+  }  
+
+ 
+
+/*#info{
+  border: 1px solid rgb(94, 255, 0);
+  width: 30% ;
+  margin-left: 60%;
+  margin-bottom: 0;
+  
+
+}*/

@@ -1,0 +1,151 @@
+*{
+  margin: 0;
+  padding: 0;
+  /*border: 1px solid white;*/
+  color:  rgb(94, 255, 0);
+  box-sizing: border-box;
+}
+body{
+  background: rgb(0, 0, 0);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+}
+#developer{
+  background: rgba(255, 255, 255, 0.377);
+  height: 75px;
+  
+}
+h1, h2{
+  text-align: center;
+}
+
+.top img{
+  height: 175px;
+  
+  margin:5px;
+  margin-top: 40px;
+  left: 38%;
+  right: 38%;
+  border-radius: 50%;
+  border: 3px solid  rgb(94, 255, 0);
+ 
+} 
+.teste{
+  text-align: center;
+}
+
+.redes{
+
+  margin-bottom: 50px;
+  margin-left: 36.6%;
+  
+}
+.redes img{
+  border-radius: 15px; 
+  border: 3px solid  rgb(241, 239, 239);
+  height: 50px;
+   margin-top: 22px;
+   margin-right:20px ;
+
+} 
+
+.redes img:hover{
+  box-shadow: 1px 2px 30px 1px rgb(94, 255, 0);
+}
+
+
+#matrix {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+}
+#main{
+position: absolute;
+border: 1px solid rgb(94, 255, 0);
+width: 35%;
+margin-left: 33%;
+background: rgba(24, 23, 23, 0.712);
+height: 100%;
+overflow: auto;
+}
+.top{
+  margin-top: 30px;
+}
+.rodape{
+  text-align: center;
+  height: auto;
+}
+.navegation{
+  padding: 0px;
+}
+.navegation a{
+  display: block;
+  width: 200px;
+  padding: 10px;
+  margin: 8px auto;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color:  rgb(94, 255, 0);
+  background: rgba(177, 169, 169, 0.849);
+  border-radius: 8px;
+  font-size: 1.2em;
+ 
+  
+}
+.navegation a:hover{
+  color: whitesmoke;
+  background:  rgb(62, 202, 6);
+  box-shadow: 1px 2px 30px 1px rgb(94, 255, 0); 
+}
+
+/* Smartphones (600px para baixo) */
+@media only screen and (max-width: 600px) {
+  *{
+    width: auto;
+    overflow: auto;
+    margin: auto;
+  } 
+ 
+
+  #main{ 
+    margin: 0 auto;
+    width: 100%;
+  }
+ 
+  
+  .navegation a{
+   width: auto;
+   margin: 20px;
+   
+  } 
+  .rodape{
+    
+    font-size: smaller;
+  } 
+
+  .redes{
+
+   margin: auto;
+   width: auto;
+   height: auto;
+  } 
+  .redes img{
+    display: inline-block;
+    margin: 50px 0; 
+    margin-left: 26%;
+  }
+}
+
+/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+@media only screen and (min-width: 600px) {}
+
+/*Dispostivos Médios (Tablets deitados, 768px para cima) */
+@media only screen and (min-width: 768px){} 
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media only screen and (min-width: 992px){} 
+
+/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+@media only screen and (min-width: 1200px){} 
