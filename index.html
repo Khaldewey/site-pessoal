@@ -12,57 +12,70 @@
 <body style="background: black;">
 
 
-  <div class="container-fluid bg-dark mb-4" style="color:rgb(62, 202, 6) ;">
+  <div class="container-fluid bg-dark " style="color:rgb(62, 202, 6) ;">
 
     <div class="row ">
 
 
       <div class="col-4 ">
-        <p>
-        <h1 class="mb-0 d-flex justify-content-left"><strong>Israel Alves</strong></h1><br><small class="mt-0">Analista
-          e Desenvolvedor de Sistemas</small> | <small>Full-Stack <b>Jr</b></small> </p>
+
       </div>
       <div class="col-4 mt-3 d-flex justify-content-center">
         <img src="../img/perfilatualizado.jfif" class="fluid-img" alt="..."
           style="border-radius: 50%; width: 100px; height: 100px;">
       </div>
       <div class="col-4 mt-4">
-        <figure class="text-end">
-          <blockquote class="blockquote">
-            <p>"O que sabemos é uma gota, o que ignoramos é um oceano"</p>
-          </blockquote>
-          <figcaption class="blockquote-footer">
-            Sir Isaac Newton
-          </figcaption>
-        </figure>
+
       </div>
+
+
 
     </div>
   </div>
-  </div>
 
-  <div class="d-grid gap-2 col-6 mx-auto mt-5">
-    <a href="./bootstrap pages/curriculo.html" class="btn btn-success">CURRÍCULO</a>
-    <a href="./bootstrap pages/projetos.html" class="btn btn-success">PROJETOS</a>
+  <div class="container-fluid" style="position: absolute;">
+    <canvas id="canvas"></canvas>
   </div>
-  <br>
-  <div class="container">
+  <div class="d-flex justify-content-center">
+    <div style="position: relative; background-color: rgba(0, 0, 0, 0.8); width:400px; border-radius:10px ;">
+      <div class="text-center">
+        <p>
+        <h1 style="color:rgb(62, 202, 6) ;"><strong>Israel Alves</strong></h1><small
+          style="color:rgb(62, 202, 6) ;">Desenvolvedor e técnico de tecnologia
+          da
+          informação</small> </p>
+      </div>
+      <div class=" d-grid gap-2 col-6 mx-auto mt-5">
+        <a href="./bootstrap pages/curriculo.html" class="btn btn-success">Currículo</a>
+        <a href="./bootstrap pages/projetos.html" class="btn btn-success">Projetos</a>
+        <a href="https://github.com/Khaldewey" class="btn btn-success" target="_blank">Github</a>
+        <a href="https://www.linkedin.com/in/israel-alves-de-jesus-30413a17a/" class="btn btn-success"
+          target="_blank">Linkedn</a>
+      </div>
+      <br>
+      <!--<div class="container">
     <div class="row d-flex justify-content-center">
-      <div class="col-2 d-flex justify-content-center  "><a href="https://github.com/Khaldewey"><img
+      <div class="col-3 d-flex justify-content-center   "><a href="https://github.com/Khaldewey"><img
             src="../img/github.png" alt="" class="img-fluid" style="border-radius: 50% ;"></a>
       </div>
 
 
-      <div class="col-2 d-flex justify-content-center "><a
+      <div class="col-3 d-flex justify-content-center "><a
           href="https://www.linkedin.com/in/israel-alves-de-jesus-30413a17a/"><img src="../img/images.png" alt=""
             class="img-fluid" style="border-radius: 50%;"></a>
       </div>
+    </div>-->
+      <br><br>
+      <div class="text-center">
+        <p>
+        <h1 style="color:rgb(62, 202, 6) ;"><strong>Certificados</strong></h1>
+      </div>
     </div>
-
   </div>
-  <br><br><br>
-  <h1 class="display-6 d-flex justify-content-center mb-4" style="color:rgb(62, 202, 6) ;">Certificados</h1>
+
+  <br>
   <div class="container">
+
     <div class="row d-flex justify-content-center">
       <div class="col-6">
         <div id="carouselExampleFade" class="carousel carousel-dark slide carousel-fade border" data-bs-ride="carousel">
@@ -113,11 +126,44 @@
       </div>
     </div>
   </div>
-  <script src="./js/bootstrap.bundle.min.js"></script>
 
-  <div class="container d-flex justify-content-center mt-5">
-    <h4>&copy;&nbsp;Todos os direitos reservados | 2022</h4>
-  </div>
+
+  <script type="text/javascript">
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    var texts = '0123456789'.split('');
+    var fontSize = 16;
+    var columns = canvas.width / fontSize;
+    var drops = [];
+    for (var x = 0; x < columns; x++) {
+      drops[x] = 1;
+    }
+
+    function draw() {
+      ctx.fillStyle = 'rgba(0,0,0,0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#0F0';
+      ctx.font = fontSize + 'px arial';
+      for (var i = 0; i < drops.length; i++) {
+        var text = texts[Math.floor(Math.random() * texts.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height || Math.random() > 0.95) {
+          drops[i] = 0;
+        }
+
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 33);
+  </script>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
