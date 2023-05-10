@@ -1,0 +1,16 @@
+.waths {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  background: greenyellow;
+  color: black;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 0;
+  right: 0; 
+  border-radius: 50%;
+  background-image: radial-gradient(rgb(196, 210, 214), rgb(13, 172, 66));
+} 
+
