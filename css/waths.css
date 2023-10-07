@@ -8,8 +8,8 @@
   width: 60px;
   height: 60px;
   position: fixed;
-  bottom: 0;
-  right: 0; 
+  bottom: 3rem;
+  right: 2rem; 
   border-radius: 50%;
   background-image: radial-gradient(rgb(196, 210, 214), rgb(13, 172, 66));
 } 
