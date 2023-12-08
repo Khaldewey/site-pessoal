@@ -5,141 +5,388 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="../css/rodape.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/rodape.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
-    <style>h1{font-family: 'Bruno Ace SC', cursive;}
-    </style> 
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+
+
+    <style>
+        h1 {
+            font-family: 'Bruno Ace SC', cursive;
+        }
+    </style>
+
     <title>Projetos</title>
 </head>
 
 <body class="bg-light">
-    <div class="container-fluid bg-dark mb-4" style="color:rgb(62, 202, 6) ;">
 
-        <div class="row ">
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../img/perfilatualizado.jfif" class="rounded-circle" alt="Perfil" width="50" height="50">
+        </a>
+    </nav>
+    
+    <div class="jumbotron text-center">
+      <h1 class="display-4" style="font-family: 'Playfair Display', serif;">Estatísticas</h1>
+      <p class="lead">Informações baseadas em análise de dados do github. (Última atualização: 08/12/2023)</p>
+  </div>
 
+    <div style="width: 80%; margin: 0 auto;">
+      <canvas id="myChart"></canvas>
+  </div>
 
-          
-            <div class="col-12 mt-3 d-flex justify-content-center">
-                <a href="../index.html"><img src="../img/perfilatualizado.jfif" class="fluid-img" alt="..."
-                        style="border-radius: 50%; width: 100px; height: 100px;"></a>
+  <script>
+      // Dados
+      const data = {
+          labels: ['HTML','Ruby', 'Java', 'CSS', 'PHP', 'JavaScript', 'Slim', 'TypeScript', 'C', 'Sass'],
+          datasets: [{
+              label: 'Percentagem de Uso por Linguagem',
+              data: [19.03, 15.71, 15.13, 11.93, 11.59, 10.96, 7.34, 4.35, 1.99, 1.98],
+              backgroundColor: 'rgba(75, 192, 192, 0.2)',
+              borderColor: 'rgba(75, 192, 192, 1)',
+              borderWidth: 1
+          }]
+      };
+
+      // Opções
+      const options = {
+          scales: {
+              x: {
+                  beginAtZero: true,
+                  max: 100
+              }
+          }
+      };
+
+      // Criar gráfico
+      const ctx = document.getElementById('myChart').getContext('2d');
+      const myChart = new Chart(ctx, {
+          type: 'bar',
+          data: data,
+          options: options
+      });
+  </script>
+
+    <div class="jumbotron text-center">
+      <h1 class="display-4" style="font-family: 'Playfair Display', serif;">Desenvolvimento Web</h1>
+      <p class="lead">Última atualização: 08/12/2023</p>
+  </div>
+
+    <!-- Seção de Projetos usando o sistema de grid do Bootstrap -->
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                  <h4 class="card-title"><b>Back-end do site institucional Tatiane Fiel</b></h4>
+                  <h6 class="card-subtitle mb-2">
+                    <a href="https://tatianefiel.com.br/" target="_blank">
+                      <i class="fas fa-play-circle" title="Acesse o site"></i>
+                      <span class="sr-only">Acesse o site</span>
+                  </a>
+                  </h6>
+                  <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="/video/tatiane.mp4" allowfullscreen></iframe>
+                  </div>
+                  <div class="descricao mt-3">
+                    <p class="card-text">
+                      <i class="fas fa-gem fa-2x mr-2" title="Ruby"></i>
+                      <i class="fas fa-database fa-2x mr-2" title="PostgreSQL"></i>
+                      <i class="fab fa-js fa-2x" title="JavaScript"></i>
+                  </p>
+                  </div>
+              </div>
+          </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                  <h4 class="card-title"><b>Back-end do site institucional Ville Office</b></h4>
+                  <h6 class="card-subtitle mb-2">
+                    <a href="https://www.ville.ind.br/" target="_blank">
+                      <i class="fas fa-play-circle" title="Acesse o site"></i>
+                      <span class="sr-only">Acesse o site</span>
+                  </a>
+                  </h6>
+                  <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="/video/ville.mp4" allowfullscreen></iframe>
+                  </div>
+                  <div class="descricao mt-3">
+                    <p class="card-text">
+                      <i class="fas fa-gem fa-2x mr-2" title="Ruby"></i>
+                      <i class="fas fa-database fa-2x mr-2" title="PostgreSQL"></i>
+                      <i class="fab fa-js fa-2x" title="JavaScript"></i>
+                  </p>
+                  </div>
+              </div>
+          </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                  <h4 class="card-title"><b>Gerenciador de Pagamentos</b></h4>
+                  <h6 class="card-subtitle mb-2">
+                    <a href="http://avaliacaophpisrael.free.nf/" target="_blank">
+                      <i class="fas fa-play-circle" title="Acesse o aplicativo"></i>
+                      <span class="sr-only">Acesse o aplicativo</span>
+                  </a>
+                  </h6>
+                  <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="/video/teste=titan.mp4" allowfullscreen></iframe>
+                  </div>
+                  <div class="descricao mt-3">
+                    <p class="card-text">
+                      <i class="fab fa-php fa-2x mr-2" title="PHP"></i>
+                      <i class="fas fa-database fa-2x mr-2" title="MySQL"></i>
+                      <i class="fab fa-js fa-2x" title="JavaScript"></i>
+                  </p>
+                  </div>
+              </div>
+          </div>
+          </div>
+            <!-- Colunas para Projetos -->
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title"><b>CRUD com PHP</b></h4>
+                    <h6 class="card-subtitle mb-2">
+                      <a href="https://github.com/Khaldewey/gerenciador-de-armarios" target="_blank">
+                        <i class="fab fa-github" title="Acesse o repositório no GitHub"></i>
+                        <span class="sr-only">Acesse o repositório no GitHub</span>
+                    </a>
+                    </h6>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="/video/InShot_20221101_134640420.mp4" allowfullscreen></iframe>
+                    </div>
+                    <div class="descricao mt-3">
+                      <p class="card-text">
+                        <i class="fab fa-php fa-2x mr-2" title="PHP"></i>
+                        <i class="fas fa-database fa-2x mr-2" title="MySQL"></i>
+                        <i class="fab fa-js fa-2x" title="JavaScript"></i>
+                    </p>
+                    </div>
+                </div>
             </div>
-   
-
+            </div>
+            <!-- Adicione mais colunas para outros projetos --> 
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Calculadora</b></h4>
+                    <h6 class="card-subtitle mb-2">
+                      <a href="https://steady-biscuit-62b75b.netlify.app/" target="_blank">
+                        <i class="fas fa-play-circle" title="Acesse o aplicativo"></i>
+                        <span class="sr-only">Acesse o aplicativo</span>
+                    </a>
+                    </h6>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="/video/InShot_20221029_160432179.mp4" allowfullscreen></iframe>
+                    </div>
+                    <div class="descricao mt-3">
+                      <p class="card-text">
+                        <i class="fab fa-html5 fa-2x mr-2" title="HTML"></i>
+                        <i class="fab fa-css3 fa-2x mr-2" title="CSS"></i>
+                        <i class="fab fa-js fa-2x" title="JavaScript"></i>
+                    </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Adicione mais colunas para outros projetos --> 
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Super Mario</b></h4>
+                    <h6 class="card-subtitle mb-2">
+                      <a href="https://superlative-duckanoo-5b83ca.netlify.app/" target="_blank">
+                        <i class="fas fa-play-circle" title="Acesse o aplicativo"></i>
+                        <span class="sr-only">Acesse o aplicativo</span>
+                    </a>
+                    </h6>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="/video/InShot_20221029_161307251.mp4" allowfullscreen></iframe>
+                    </div>
+                    <div class="descricao mt-3">
+                      <p class="card-text">
+                        <i class="fab fa-html5 fa-2x mr-2" title="HTML"></i>
+                        <i class="fab fa-css3 fa-2x mr-2" title="CSS"></i>
+                        <i class="fab fa-js fa-2x" title="JavaScript"></i>
+                    </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Adicione mais colunas para outros projetos --> 
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Cronômetro</b></h4>
+                    <h6 class="card-subtitle mb-2">
+                      <a href="https://grand-custard-3c1a2a.netlify.app" target="_blank">
+                        <i class="fas fa-play-circle" title="Acesse o aplicativo"></i>
+                        <span class="sr-only">Acesse o aplicativo</span>
+                    </a>
+                    </h6>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="/video/InShot_20221029_155927671.mp4" allowfullscreen></iframe>
+                    </div>
+                    <div class="descricao mt-3">
+                      <p class="card-text">
+                        <i class="fab fa-html5 fa-2x mr-2" title="HTML"></i>
+                        <i class="fab fa-css3 fa-2x mr-2" title="CSS"></i>
+                        <i class="fab fa-js fa-2x" title="JavaScript"></i>
+                    </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Adicione mais colunas para outros projetos --> 
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Gerenciador de Armários</b></h4>
+                    <h6 class="card-subtitle mb-2">
+                      <a href="http://armarios.infinityfreeapp.com/index.php" target="_blank">
+                        <i class="fas fa-play-circle" title="Acesse o aplicativo"></i>
+                        <span class="sr-only">Acesse o aplicativo</span>
+                    </a>
+                    </h6>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="/video/Design sem nome.mp4" allowfullscreen></iframe>
+                    </div>
+                    <div class="descricao mt-3">
+                      <p class="card-text">
+                        <i class="fab fa-php fa-2x mr-2" title="PHP"></i>
+                        <i class="fas fa-database fa-2x mr-2" title="MySQL"></i>
+                        <i class="fab fa-js fa-2x" title="JavaScript"></i>
+                    </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Adicione mais colunas para outros projetos --> 
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Mega-Sena</b></h4>
+                    <h6 class="card-subtitle mb-2">
+                      <a href="https://megasenavirtual.netlify.app" target="_blank">
+                        <i class="fas fa-play-circle" title="Acesse o aplicativo"></i>
+                        <span class="sr-only">Acesse o aplicativo</span>
+                    </a>
+                    </h6>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="/video/Design sem nome (1).mp4" allowfullscreen></iframe>
+                    </div>
+                    <div class="descricao mt-3">
+                      <p class="card-text">
+                        <i class="fab fa-html5 fa-2x mr-2" title="HTML"></i>
+                        <i class="fab fa-css3 fa-2x mr-2" title="CSS"></i>
+                        <i class="fab fa-js fa-2x" title="JavaScript"></i>
+                    </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Adicione mais colunas para outros projetos --> 
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title"><b>BuzzFeed</b></h4>
+                    <h6 class="card-subtitle mb-2">
+                      <a href="https://is-buzzfeed.netlify.app/" target="_blank">
+                        <i class="fas fa-play-circle" title="Acesse o aplicativo"></i>
+                        <span class="sr-only">Acesse o aplicativo</span>
+                    </a>
+                    </h6>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="/video/buzzfeed.mp4" allowfullscreen></iframe>
+                    </div>
+                    <div class="descricao mt-3">
+                      <p class="card-text">
+                        <i class="fab fa-html5 fa-2x mr-2" title="HTML"></i>
+                        <i class="fab fa-css3 fa-2x mr-2" title="CSS"></i>
+                        <i class="fab fa-js fa-2x" title="JavaScript"></i>
+                        <i class="fab fa-angular fa-2x" title="Angular"></i>
+                    </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title"><b>API Rest para Blog</b></h4>
+                    <h6 class="card-subtitle mb-2">
+                      <a href="https://github.com/Khaldewey/api-blog" target="_blank">
+                        <i class="fab fa-github" title="Acesse o repositório no GitHub"></i>
+                        <span class="sr-only">Acesse o repositório no GitHub</span>
+                    </a>
+                    </h6>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="/video/apirest.mp4" allowfullscreen></iframe>
+                    </div>
+                    <div class="descricao mt-3">
+                      <p class="card-text">
+                        <i class="fab fa-java fa-2x mr-2" title="Java"></i>
+                        <i class="fas fa-cogs fa-2x mr-2" title="Spring Framework"></i>
+                        <i class="fas fa-database fa-2x" title="PostgreSQL"></i>
+                    </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Adicione mais colunas para outros projetos --> 
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Camada front-end com consumo de API simples de blog</b></h4>
+                    <h6 class="card-subtitle mb-2">
+                      <a href="https://apiblogconsumer.netlify.app/" target="_blank">
+                        <i class="fas fa-play-circle" title="Acesse o aplicativo"></i>
+                        <span class="sr-only">Acesse o aplicativo</span>
+                    </a>
+                    </h6>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="/video/angular with spring.mp4" allowfullscreen></iframe>
+                    </div>
+                    <div class="descricao mt-3">
+                      <p class="card-text">
+                        <i class="fab fa-java fa-2x mr-2" title="Java"></i>
+                        <i class="fas fa-cogs fa-2x mr-2" title="Spring Framework"></i>
+                        <i class="fab fa-angular fa-2x" title="Angular"></i>
+                        <i class="fas fa-database fa-2x" title="MongoDB"></i>
+                    </p>
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
-    </div> 
-    <div class="container bg-warning text-center"><h1>Desenvolvimento Web</h1></div>
-    
-    <div class="container bg-light">
-        <div class="row">
-          <div class="col bg-dark text-center rounded border" style="color :white;">
-            <h4><b>CRUD com php</b></h4>
-                    <h6><a href="https://github.com/Khaldewey/gerenciador-de-armarios" target="_blank">Clique aqui para acessar o repositório</a></h6>
-                    <div class="embed-responsive embed-responsive-21by9">
-                        <iframe class="embed-responsive-item" src="/video/InShot_20221101_134640420.mp4"></iframe>
-                      </div>
-                    <div class="descricao">
-                        <h6><b>Tecnologias</b>: PHP, MYSQL, JAVASCRIPT<br></h6>
-                    </div>
-          </div>
-          <div class="col bg-dark text-center rounded border" style="color :white;">
-            <h4><b>Calculadora</b></h4>
-                    <h6><a href="https://steady-biscuit-62b75b.netlify.app/" target="_blank">Clique aqui para acessar o aplicativo</a></h6>
-                    <div class="embed-responsive embed-responsive-21by9">
-                        <iframe class="embed-responsive-item" src="/video/InShot_20221029_160432179.mp4"></iframe>
-                      </div>
-                    <div class="descricao">
-                        <h6><b>Tecnologias</b>: HTML, CSS, JAVASCRIPT<br></h6>
-                    </div>
-          </div>
-          <div class="col bg-dark text-center rounded border" style="color :white;">
-            <h4><b>Super Mario</b></h4>
-                    <h6><a href="https://superlative-duckanoo-5b83ca.netlify.app/" target="_blank">Clique aqui para acessar o aplicativo</a></h6>
-                    <div class="embed-responsive embed-responsive-21by9">
-                        <iframe class="embed-responsive-item" src="/video/InShot_20221029_161307251.mp4"></iframe>
-                      </div>
-                    <div class="descricao">
-                        <h6><b>Tecnologias</b>: HTML, CSS, JAVASCRIPT<br></h6>
-                    </div>
-          </div> 
-          <div class="col bg-dark text-center rounded border" style="color :white;">
-            <h4><b>Cronômetro</b></h4>
-                    <h6><a href="https://grand-custard-3c1a2a.netlify.app" target="_blank">Clique aqui para acessar o aplicativo</a></h6>
-                    <div class="embed-responsive embed-responsive-21by9">
-                        <iframe class="embed-responsive-item" src="/video/InShot_20221029_155927671.mp4"></iframe>
-                      </div>
-                    <div class="descricao">
-                        <h6><b>Tecnologias</b>: HTML, CSS, JAVASCRIPT<br></h6>
-                    </div>
-          </div> 
-          <div class="col bg-dark text-center rounded border" style="color :white;">
-            <h4><b>Gerenciador de Armários</b></h4>
-                    <h6><a href="http://armarios.infinityfreeapp.com/index.php" target="_blank">Clique aqui para acessar o aplicativo</a></h6>
-                    <div class="embed-responsive embed-responsive-21by9">
-                        <iframe class="embed-responsive-item" src="/video/Design sem nome.mp4"></iframe>
-                      </div>
-                    <div class="descricao">
-                        <h6><b>Tecnologias</b>: PHP, MYSQL, JAVASCRIPT<br></h6>
-                    </div>      
-          </div> 
-          <div class="col bg-dark text-center rounded border" style="color :white;">
-            <h4><b>Mega-Sena</b></h4>
-                    <h6><a href="https://megasenavirtual.netlify.app" target="_blank">Clique aqui para acessar o aplicativo</a></h6>
-                    <div class="embed-responsive embed-responsive-21by9">
-                        <iframe class="embed-responsive-item" src="/video/Design sem nome (1).mp4"></iframe>
-                      </div>
-                    <div class="descricao">
-                        <h6><b>Tecnologias</b>: HTML, CSS, JAVASCRIPT<br></h6>
-                    </div>
-        </div> 
 
-        <div class="col bg-dark text-center rounded border" style="color :white;">
-          <h4><b>BuzzFeed</b></h4>
-                  <h6><a href="https://is-buzzfeed.netlify.app/" target="_blank">Clique aqui para acessar o aplicativo</a></h6>
-                  <div class="embed-responsive embed-responsive-21by9">
-                      <iframe class="embed-responsive-item" src="/video/buzzfeed.mp4"></iframe>
-                    </div>
-                  <div class="descricao">
-                      <h6><b>Tecnologias</b>: HTML, CSS, JAVASCRIPT, ANGULAR<br></h6>
-                  </div>
-      </div> 
-      <div class="col bg-dark text-center rounded border" style="color :white;">
-        <h4><b>API Rest para Blog</b></h4>
-                <h6><a href="https://github.com/Khaldewey/api-blog" target="_blank">Clique aqui para acessar o repositório</a></h6>
-                <div class="embed-responsive embed-responsive-21by9">
-                    <iframe class="embed-responsive-item" src="/video/apirest.mp4"></iframe>
-                  </div>
-                <div class="descricao">
-                    <h6><b>Tecnologias</b>: JAVA, SPRING FRAMEWORK, POSTGRESQL<br></h6>
-                </div>
-    </div>
-      </div> 
-
-      <div class="col bg-dark text-center rounded border" style="color :white;">
-        <h4><b>Camada front-end com consumo de API simples de blog</b></h4>
-                <h6><a href="https://apiblogconsumer.netlify.app/" target="_blank">Clique aqui para acessar o aplicativo</a></h6>
-                <div class="embed-responsive embed-responsive-21by9">
-                    <iframe class="embed-responsive-item" src="/video/angular with spring.mp4"></iframe>
-                  </div>
-                <div class="descricao">
-                    <h6><b>Tecnologias</b>: JAVA, SPRING FRAMEWORK, POSTGRESQL, ANGULAR, TYPESCRIPT<br></h6>
-                </div>
-    </div>
-      </div>
-
-    </div>
-       <br><br><br><br><br><br><br>
-
-       
-      <div class="rodape container-fluid bg-dark">
+    <!-- Rodapé responsivo -->
+    <div class="container-fluid bg-dark text-center text-light py-3">
         <h4>&copy;&nbsp;Todos os direitos reservados <span id="ano"></span></h4>
-        </div> 
-      <script src="../js/script.js"></script>
-    <script src="../js/bootstrap.bundle.min.js"></script>
+    </div>
+
+    <!-- Scripts JS e Bootstrap -->
+    <script src="../js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+   
+  
 </body>
 
 </html>
