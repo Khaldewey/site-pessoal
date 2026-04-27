@@ -1,7 +1,12 @@
-.rodape{
-  text-align: center;
-   
-  color: aliceblue; 
-  
-  
+.rodape {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
 }
+
+.rodape h4 {
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+

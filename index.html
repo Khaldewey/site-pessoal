@@ -29,6 +29,11 @@
     .matrix-text {
       position: absolute;
     }
+
+    .h4, h4 {
+        text-align: center;
+        font-size: calc(1.275rem + .3vw);
+    }
   </style>
   
 </head>
@@ -81,12 +86,26 @@
         </p>
       </div>
       <div class="text-center" style="display: flex; flex-direction: row; justify-content: center;">
-        <img src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white" alt="">
         <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" alt="">
         <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="">
         <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="">
         <img src="https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white" alt="">
         
+      </div>
+
+      <div class="text-center mt-4 pix-box">
+        <h5 class="pix-title">Apoie via Pix</h5>
+        <img src="../img/pix.jpg" class="pix-img" alt="QR Code Pix">
+        <div class="pix-copy-box mt-3">
+          <input type="text" id="pixCode" 
+            value="00020101021126580014br.gov.bcb.pix0136e01f6ef7-1695-4dd3-b9f0-29638b05acee5204000053039865802BR5921ISRAEL ALVES DE JESUS6007ARACAJU62070503***6304B272" 
+            readonly>
+          
+          <button onclick="copiarPix()">Copiar</button>
+        </div>
+        <div class="pix-aviso mt-3">
+          💡 Envie seu <strong>@ do Instagram</strong> na descrição do pagamento para ser incluído na lista de patrocinadores do canal.<br> ⚠️ Válido somente para valores acima de 50 reais!<br> ⚠️ Mensalmente os patrocinadores serão mencionados no instagram e no youtube. <br> ⚠️ Efeito cumulativo, EX: Se doar 10 reais 5x por mês então será exibido.
+        </div>
       </div>
       <!-- <div class="text-center" style="display: flex; flex-wrap: wrap; justify-content: center;">
         <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL Badge" style="max-width: 100px; max-height: 100px; margin: 5px;">
@@ -106,8 +125,6 @@
       
       
       <div class=" d-grid gap-2 col-6 mx-auto mt-5">
-        <a href="./curriculo/curriculo.html" class="btn btn-success">Currículo</a>
-        <a href="./bootstrap pages/projetos.html" class="btn btn-success">Projetos</a>
         <a href="https://github.com/Khaldewey" class="btn btn-success" target="_blank">Github</a>
         <a href="https://www.linkedin.com/in/is-rael/" class="btn btn-success"
           target="_blank">Linkedn</a>
@@ -257,12 +274,14 @@
     </div>
   </div>
   <br><br>
- <div class="rodape">
-    <h4>&copy;&nbsp;Todos os direitos reservados <span id="ano"></span></h4>
-    </div> 
+ 
     
   
-  <div class="waths"><a href="https://wa.me/5579996613823" target="_blank"><img src="./img/wathsapp-removebg-preview.png" alt="" srcset="" class="img-fluid"></a></div> 
+  <div class="waths">
+    <a href="https://discord.gg/qAuCfqmu" target="_blank">
+      <img src="../img/discord-y.png" class="discord-btn">
+    </a>
+  </div>
   
    
   <script>
@@ -340,8 +359,21 @@
 
     setInterval(draw, 33);
   </script> -->
+  <script>
+    function copiarPix() {
+        const input = document.getElementById("pixCode");
+        input.select();
+        input.setSelectionRange(0, 99999); // mobile
+        
+        navigator.clipboard.writeText(input.value);
+
+        alert("Código Pix copiado!");
+    }
+  </script>
   <script src="./js/script.js"></script>
   <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
-
+<div class="rodape">
+    <h4>&copy;&nbsp;Todos os direitos reservados <span id="ano"></span></h4>
+ </div> 
 </html>
