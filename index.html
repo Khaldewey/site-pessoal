@@ -209,29 +209,112 @@ body {
 }
 
 /* LANG */
-.lang { display: none; }
-.lang.pt { display: inline; }
-
 .lang-switch {
   position: fixed;
-  top: 15px;
+  top: 20px;
   right: 20px;
-  z-index: 9999;
+  z-index: 999;
 }
 
 .lang-btn {
   background: #111;
-  color: #fff;
+  color: #aaa;
   border: none;
-  padding: 6px 10px;
-  margin-left: 5px;
-  border-radius: 5px;
+  padding: 6px 12px;
+  margin: 2px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
+.lang-btn:hover {
+  background: #222;
+  color: #fff;
+}
+
+/* ATIVO */
 .lang-btn.active {
   background: #00ff88;
   color: #000;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,255,136,0.5);
+}
+
+.album-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.player iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+/* TRACKLIST */
+.tracklist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.track {
+  background: #111;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.track:hover {
+  background: #00ff88;
+  color: #000;
+}
+
+/* ATIVO */
+.track.active {
+  background: #00ff88;
+  color: #000;
+  font-weight: bold;
+}
+
+/* SECTION MÚSICAS */
+#musicas {
+  background: radial-gradient(circle at center, #0a0a0a, #000);
+}
+
+/* CONTAINER DO PLAYER */
+#musicas iframe {
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+/* EFEITO GLOW */
+#musicas iframe:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(0, 255, 136, 0.25);
+}
+
+/* WRAPPER CENTRAL */
+#musicas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TÍTULO */
+#musicas h2 {
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  #musicas iframe {
+    height: 300px;
+  }
 }
 </style>
 <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
@@ -310,40 +393,45 @@ body {
 
   <p>
     <span class="lang pt">
-Israel Alves é um guitarrista com mais de 20 anos de envolvimento com a música, iniciando sua jornada aos 10 anos no Conservatório de Música do Estado de Sergipe.
+        Israel Alves é um guitarrista com mais de 20 anos de envolvimento com a música, iniciando sua jornada aos 10 anos no Conservatório de Música do Estado de Sergipe.
 
-Com base sólida no violão clássico, evoluiu para a guitarra de forma autodidata, desenvolvendo identidade própria.
+        Com base sólida no violão clássico, evoluiu para a guitarra de forma autodidata, desenvolvendo identidade própria.
 
-Influenciado por Buckethead, Paul Gilbert e Steve Vai, suas composições unem técnica, criatividade e expressividade.
+        Influenciado por Buckethead, Paul Gilbert e Steve Vai, suas composições unem técnica, criatividade e expressividade.
 
-Também atua em produção musical, gravação, mixagem e masterização, integrando arte e tecnologia.
+        Também atua em produção musical, gravação, mixagem e masterização, integrando arte e tecnologia.
     </span>
 
     <span class="lang en">
-Israel Alves is a guitarist with over 20 years of involvement in music, starting his journey at age 10 at the Sergipe State Conservatory of Music.
+        Israel Alves is a guitarist with over 20 years of involvement in music, starting his journey at age 10 at the Sergipe State Conservatory of Music.
 
-With a strong foundation in classical guitar, he evolved into electric guitar in a self-taught way, developing his own identity.
+        With a strong foundation in classical guitar, he evolved into electric guitar in a self-taught way, developing his own identity.
 
-Influenced by Buckethead, Paul Gilbert and Steve Vai, his compositions combine technique, creativity and expressiveness.
+        Influenced by Buckethead, Paul Gilbert and Steve Vai, his compositions combine technique, creativity and expressiveness.
 
-He also works in music production, recording, mixing and mastering, integrating art and technology.
+        He also works in music production, recording, mixing and mastering, integrating art and technology.
     </span>
   </p>
 </section>
 
 <!-- MÚSICAS -->
+<!-- ÁLBUM -->
 <section id="musicas" class="section fade-in">
+
   <h2>
     <span class="lang pt">Últimos Lançamentos</span>
     <span class="lang en">Latest Releases</span>
   </h2>
 
-  <div class="spotify">
-    <iframe src="https://open.spotify.com/embed/artist/0GHRfHa4ntoG2MGmu0O8Xt"
-      width="100%" height="400" frameborder="0"
-      allow="autoplay; encrypted-media">
+  <div class="spotify-box">
+    <iframe 
+      src="https://open.spotify.com/embed/album/5F2OGelk45zGVYshg6YNVy"
+      width="100%" 
+      height="380"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
     </iframe>
   </div>
+
 </section>
 
 <!-- APOIE -->
@@ -388,15 +476,15 @@ He also works in music production, recording, mixing and mastering, integrating 
 
           <div class="service-back">
             <span class="lang pt">
-Desenvolvimento de músicas expressivas com base sólida em teoria musical: empréstimos modais, ciclos de quarta e quinta, escalas menores harmônicas e melódicas, modulações e construção de identidade sonora.
+                Desenvolvimento de músicas expressivas com base sólida em teoria musical: empréstimos modais, ciclos de quarta e quinta, escalas menores harmônicas e melódicas, modulações e construção de identidade sonora.
 
-Inclui criação, arranjos, direção artística e construção completa da obra.
+                Inclui criação, arranjos, direção artística e construção completa da obra.
             </span>
 
             <span class="lang en">
-Development of expressive music with a strong foundation in music theory: modal interchange, circle of fourths and fifths, harmonic and melodic minor scales, modulations and sonic identity building.
+                Development of expressive music with a strong foundation in music theory: modal interchange, circle of fourths and fifths, harmonic and melodic minor scales, modulations and sonic identity building.
 
-Includes composition, arrangements, artistic direction and full production.
+                Includes composition, arrangements, artistic direction and full production.
             </span>
           </div>
         </div>
@@ -412,11 +500,11 @@ Includes composition, arrangements, artistic direction and full production.
 
           <div class="service-back">
             <span class="lang pt">
-Captação profissional de áudio com foco em qualidade e fidelidade sonora.
+                Captação profissional de áudio com foco em qualidade e fidelidade sonora.
             </span>
 
             <span class="lang en">
-Professional audio recording focused on quality and fidelity.
+                Professional audio recording focused on quality and fidelity.
             </span>
           </div>
         </div>
@@ -432,11 +520,11 @@ Professional audio recording focused on quality and fidelity.
 
           <div class="service-back">
             <span class="lang pt">
-Balanceamento completo da música com clareza e impacto profissional.
+                Balanceamento completo da música com clareza e impacto profissional.
             </span>
 
             <span class="lang en">
-Full track balancing with clarity and professional impact.
+                Full track balancing with clarity and professional impact.
             </span>
           </div>
         </div>
@@ -452,11 +540,11 @@ Full track balancing with clarity and professional impact.
 
           <div class="service-back">
             <span class="lang pt">
-Finalização profissional pronta para distribuição.
+                Finalização profissional pronta para distribuição.
             </span>
 
             <span class="lang en">
-Professional finalization ready for distribution.
+                Professional finalization ready for distribution.
             </span>
           </div>
         </div>
@@ -492,11 +580,37 @@ Professional finalization ready for distribution.
 
 <!-- JS -->
 <script>
+function playMusic(videoId, element) {
+  const player = document.getElementById("playerFrame");
+
+  // troca vídeo + autoplay
+  player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+  // remove active de todos
+  document.querySelectorAll('.track').forEach(t => t.classList.remove('active'));
+
+  // adiciona no clicado
+  element.classList.add('active');
+}
+
+window.onload = () => {
+  const saved = localStorage.getItem("lang") || "pt";
+  setLang(saved);
+};
+
 function setLang(lang) {
+  // salva idioma
   localStorage.setItem("lang", lang);
 
+  // troca textos
   document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
   document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'inline');
+
+  // REMOVE active de todos os botões
+  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+
+  // ADICIONA active no clicado
+  document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
 }
 
 window.onload = () => {
