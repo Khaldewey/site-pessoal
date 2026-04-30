@@ -210,21 +210,34 @@ body {
 
 /* LANG */
 .lang-switch {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 90px; /* espaço abaixo da navbar */
+  margin-bottom: 20px;
+
+  background: rgba(0,0,0,0.7);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 8px 14px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .lang-btn {
   background: #111;
   color: #aaa;
   border: none;
-  padding: 6px 12px;
-  margin: 2px;
-  border-radius: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
+  font-size: 14px;
 }
 
 .lang-btn:hover {
@@ -232,13 +245,15 @@ body {
   color: #fff;
 }
 
-/* ATIVO */
 .lang-btn.active {
   background: #00ff88;
   color: #000;
   font-weight: bold;
   box-shadow: 0 0 10px rgba(0,255,136,0.5);
 }
+
+
+
 
 .album-container {
   max-width: 900px;
@@ -324,10 +339,6 @@ body {
 
 <body>
 
-<div class="lang-switch">
-  <button onclick="setLang('pt')" class="lang-btn active">PT</button>
-  <button onclick="setLang('en')" class="lang-btn">EN</button>
-</div>
 
 <!-- NAVBAR -->
 <nav class="navbar fixed-top navbar-dark">
@@ -358,6 +369,11 @@ body {
     </a>
   </div>
 </nav>
+
+<div class="lang-switch">
+  <button onclick="setLang('pt')" class="lang-btn active">PT</button>
+  <button onclick="setLang('en')" class="lang-btn">EN</button>
+</div>
 
 <!-- HERO -->
 <section class="hero">
