@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="./css/waths.css"> 
+  <link rel="stylesheet" href="/css/rodape.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9786051343920866"
+     crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-color: black;
+      color: green;
+      font-family: "Courier New", monospace;
+    }
+  
+    .matrix {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.4; /* Ajuste a opacidade para controlar o brilho */
+    }
+  
+    .matrix-text {
+      position: absolute;
+    }
+
+    .h4, h4 {
+        text-align: center;
+        font-size: calc(1.275rem + .3vw);
+    }
+  </style>
+  
+</head>
+
+<body class="container-fluid">
+
+
+  <div class="container-fluid " style="color:rgb(62, 202, 6) ;">
+
+    <div class="row ">
+
+
+      <div class="col-4 ">
+        
+        <!-- <img src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
+        <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
+        <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;"> -->
+      </div>
+      <div class="col-4 mt-3 d-flex justify-content-center">
+        <img src="../img/perfilatualizado.jfif" class="fluid-img" alt="..."
+          style="border-radius: 50%; width: 300px; height: 300px; opacity: 0.7;">
+      </div>
+      <div class="col-4 mt-4">
+        <!-- <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
+        <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
+        <img src="https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
+         -->
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <div class="container-fluid" style="position: absolute;">
+    <!--<canvas id="canvas"></canvas>-->
+  </div>
+  <div class="d-flex justify-content-center">
+    <div style="position: relative; background-color: rgba(0, 0, 0, 0); width:400px; border-radius:10px ;">
+      <div class="text-center">
+        <br>
+        <p>
+          <strong
+            style="color:white ; /*background-color: black;*/ font-size: 40px; border-radius: 15%; padding: 5px;">Israel
+            Alves</strong>
+            <!-- <br><small style="color: white ; /*background-color: black;*/">Desenvolvedor e
+            técnico de tecnologia
+            da
+            informação</small> -->
+        </p>
+      </div>
+      <!-- <div class="text-center" style="display: flex; flex-direction: row; justify-content: center;">
+        <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" alt="">
+        <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="">
+        <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="">
+        <img src="https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white" alt="">
+        
+      </div> -->
+
+      <div class="text-center mt-4 pix-box">
+        <h5 class="pix-title">Apoie via Pix</h5>
+        <img src="../img/pix.jpg" class="pix-img" alt="QR Code Pix">
+        <div class="pix-copy-box mt-3">
+          <input type="text" id="pixCode" 
+            value="00020101021126580014br.gov.bcb.pix0136e01f6ef7-1695-4dd3-b9f0-29638b05acee5204000053039865802BR5921ISRAEL ALVES DE JESUS6007ARACAJU62070503***6304B272" 
+            readonly>
+          
+          <button onclick="copiarPix()">Copiar</button>
+        </div>
+        <div class="pix-aviso mt-3">
+          💡 Envie seu <strong>@ do Instagram</strong> na descrição do pagamento, pois tentarei agradecer a cada um mencionando o perfil nos meus vídeos.
+        </div>
+      </div>
+      <!-- <div class="text-center" style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL Badge" style="max-width: 100px; max-height: 100px; margin: 5px;">
+        <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
+        <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
+        <img src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
+        <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
+        <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
+        <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
+        <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
+        <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
+        <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
+        <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
+        <img src="https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
+        <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
+      </div> -->
+      
+      
+      <!-- <div class=" d-grid gap-2 col-6 mx-auto mt-5">
+        <a href="https://github.com/Khaldewey" class="btn btn-success" target="_blank">Github</a>
+        <a href="https://www.linkedin.com/in/is-rael/" class="btn btn-success"
+          target="_blank">Linkedn</a>
+      </div>
+      <br> -->
+      <!--<div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-3 d-flex justify-content-center   "><a href="https://github.com/Khaldewey"><img
+            src="../img/github.png" alt="" class="img-fluid" style="border-radius: 50% ;"></a>
+      </div>
+
+
+      <div class="col-3 d-flex justify-content-center "><a
+          href="https://www.linkedin.com/in/israel-alves-de-jesus-30413a17a/"><img src="../img/images.png" alt=""
+            class="img-fluid" style="border-radius: 50%;"></a>
+      </div>
+    </div>-->
+      <!-- <br><br>
+      <div class="text-center">
+
+        <strong style="color:white ; /*background-color: black;*/ font-size: 30px;">Certificados</strong>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div class="container">
+
+    <div class="row d-flex justify-content-center">
+      <div class="col-6">
+        <div id="carouselExampleFade" class="carousel carousel-dark slide carousel-fade border" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../img/app-moveis.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/excel-avancado.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/c-sharp.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/design-grafico.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/excel-basico.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/excel-intermediario.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/letragem-digital.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/logica-de-programacao.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/redes-comp.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/seg-ti.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/g-fun.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/g-adm.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/g-est.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/g-seg-ti.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/g-so.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/harvard.png" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br> <br>
+  <div class="text-center">
+
+    <strong style="color:white ; /*background-color: black;*/ font-size: 30px;">Bootcamps</strong>
+  </div> 
+  <br>
+  <div class="container">
+
+    <div class="row d-flex justify-content-center">
+      <div class="col-6">
+        <div id="carouselExampleFade1" class="carousel carousel-dark slide carousel-fade border" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../img/bancopan.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/linux.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/codecamp1.png" class="d-block w-100" alt="...">
+            </div> 
+            <div class="carousel-item">
+              <img src="../img/minicamp.png" class="d-block w-100" alt="...">
+            </div> 
+            <div class="carousel-item">
+              <img src="../img/angular.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/supti.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/fullstackk.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/formjava.png" class="d-block w-100" alt="...">
+            </div>
+            
+            
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade1"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade1"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br> -->
+ 
+    
+  
+  <div class="waths">
+    <a href="https://discord.gg/qAuCfqmu" target="_blank">
+      <img src="../img/discord-y.png" class="discord-btn">
+    </a>
+  </div>
+  
+   
+  <script>
+    // Define the characters for the Matrix effect
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+  
+    // Function to generate random characters
+    function randomCharacter() {
+      return characters[Math.floor(Math.random() * characters.length)];
+    }
+  
+    // Function to generate the Matrix effect
+    function generateMatrix() {
+      const matrixText = document.querySelector(".matrix-text");
+      const columns = Math.floor(window.innerWidth / 6);
+      const rows = Math.floor(window.innerHeight / 18);
+      let matrix = "";
+  
+      for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < columns; j++) {
+          matrix += randomCharacter();
+        }
+        matrix += "<br>";
+      }
+  
+      matrixText.innerHTML = matrix;
+    }
+  
+    // Create the matrix container
+    const matrixContainer = document.createElement("div");
+    matrixContainer.className = "matrix";
+    document.body.appendChild(matrixContainer);
+  
+    // Create the matrix text element
+    const matrixText = document.createElement("div");
+    matrixText.className = "matrix-text";
+    matrixContainer.appendChild(matrixText);
+  
+    // Generate the Matrix effect and update it periodically
+    generateMatrix();
+    setInterval(generateMatrix, 150);
+  </script>
+  
+  <!-- <script type="text/javascript">
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    var texts = '0123456789'.split('');
+    var fontSize = 16;
+    var columns = canvas.width / fontSize;
+    var drops = [];
+    for (var x = 0; x < columns; x++) {
+      drops[x] = 1;
+    }
+
+    function draw() {
+      ctx.fillStyle = 'rgba(0,0,0,0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#0F0';
+      ctx.font = fontSize + 'px arial';
+      for (var i = 0; i < drops.length; i++) {
+        var text = texts[Math.floor(Math.random() * texts.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height || Math.random() > 0.95) {
+          drops[i] = 0;
+        }
+
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 33);
+  </script> -->
+  <script>
+    function copiarPix() {
+        const input = document.getElementById("pixCode");
+        input.select();
+        input.setSelectionRange(0, 99999); // mobile
+        
+        navigator.clipboard.writeText(input.value);
+
+        alert("Código Pix copiado!");
+    }
+  </script>
+  <script src="./js/script.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+<div class="rodape">
+    <h4>&copy;&nbsp;Todos os direitos reservados <span id="ano"></span></h4>
+ </div> 
+</html>

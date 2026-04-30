@@ -1,381 +1,534 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="stylesheet" href="./css/bootstrap.min.css"> 
-  <link rel="stylesheet" href="./css/waths.css"> 
-  <link rel="stylesheet" href="/css/rodape.css">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9786051343920866"
-     crossorigin="anonymous"></script>
-  <style>
-    body {
-      background-color: black;
-      color: green;
-      font-family: "Courier New", monospace;
-    }
-  
-    .matrix {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      opacity: 0.4; /* Ajuste a opacidade para controlar o brilho */
-    }
-  
-    .matrix-text {
-      position: absolute;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Israel Alves | Music</title>
 
-    .h4, h4 {
-        text-align: center;
-        font-size: calc(1.275rem + .3vw);
-    }
-  </style>
-  
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- STYLE -->
+<style>
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at center, #0a0a0a, #000);
+}
+
+.hero img {
+  width: 180px;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+.hero h1 {
+  font-size: 48px;
+  letter-spacing: 4px;
+  margin-top: 20px;
+}
+
+.hero p {
+  color: #aaa;
+}
+
+/* SECTION */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+.section p {
+  max-width: 800px;
+  margin: auto;
+  color: #bbb;
+}
+
+/* SPOTIFY */
+.spotify {
+  max-width: 800px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* SERVIÇOS */
+/* CARD FLIP PROFISSIONAL */
+.service-card {
+  position: relative;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.service-front,
+.service-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  transition: 0.6s;
+  backface-visibility: hidden;
+}
+
+/* FRENTE */
+.service-front {
+  background: #111;
+  font-size: 18px;
+}
+
+/* VERSO */
+.service-back {
+  background: #00ff88;
+  color: #000;
+  transform: rotateY(180deg);
+  font-size: 13px;
+}
+
+/* EFEITO HOVER */
+.service-card:hover .service-front {
+  transform: rotateY(180deg);
+}
+
+.service-card:hover .service-back {
+  transform: rotateY(360deg);
+}
+
+/* PIX */
+/* APOIE INDEX */
+.apoie-desc {
+  color: #bbb;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  font-size: 15px;
+}
+
+.apoie-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 28px;
+  font-size: 16px;
+}
+
+.apoie-btn {
+  text-decoration: none;
+}
+
+.apoie-btn:hover {
+  text-decoration: none;
+}
+/* GARANTE ESPAÇAMENTO ENTRE SEÇÕES */
+.section {
+  padding: 100px 20px;
+}
+
+/* BOTÃO DENTRO */
+.copy-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #00ff88;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.copy-btn:hover {
+  background: #00cc6a;
+}
+
+/* CONTATO */
+#contato p {
+  word-break: break-all;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#contato a {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* BOTÃO MELHORADO */
+.btn-green {
+  background: #00ff88;
+  border: none;
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.btn-green:hover {
+  background: #00cc6a;
+}
+
+/* NAV */
+.navbar {
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  color: #00ff88 !important;
+}
+
+/* ANIMAÇÃO */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1s;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* LANG */
+.lang { display: none; }
+.lang.pt { display: inline; }
+
+.lang-switch {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.lang-btn {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.lang-btn.active {
+  background: #00ff88;
+  color: #000;
+}
+</style>
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 </head>
 
-<body class="container-fluid">
+<body>
 
+<div class="lang-switch">
+  <button onclick="setLang('pt')" class="lang-btn active">PT</button>
+  <button onclick="setLang('en')" class="lang-btn">EN</button>
+</div>
 
-  <div class="container-fluid " style="color:rgb(62, 202, 6) ;">
+<!-- NAVBAR -->
+<nav class="navbar fixed-top navbar-dark">
+  <div class="container d-flex justify-content-center gap-4">
+    <a href="#sobre" class="nav-link">
+      <span class="lang pt">Sobre</span>
+      <span class="lang en">About</span>
+    </a>
 
-    <div class="row ">
+    <a href="#musicas" class="nav-link">
+      <span class="lang pt">Músicas</span>
+      <span class="lang en">Music</span>
+    </a>
 
+    <a href="#servicos" class="nav-link">
+      <span class="lang pt">Serviços</span>
+      <span class="lang en">Services</span>
+    </a>
 
-      <div class="col-4 ">
-        
-        <!-- <img src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
-        <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
-        <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;"> -->
-      </div>
-      <div class="col-4 mt-3 d-flex justify-content-center">
-        <img src="../img/perfilatualizado.jfif" class="fluid-img" alt="..."
-          style="border-radius: 50%; width: 300px; height: 300px; opacity: 0.7;">
-      </div>
-      <div class="col-4 mt-4">
-        <!-- <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
-        <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
-        <img src="https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
-         -->
-      </div>
+    <a href="#apoie" class="nav-link">
+      <span class="lang pt">Apoie</span>
+      <span class="lang en">Support</span>
+    </a>
 
-
-
-    </div>
-  </div>
-
-  <div class="container-fluid" style="position: absolute;">
-    <!--<canvas id="canvas"></canvas>-->
-  </div>
-  <div class="d-flex justify-content-center">
-    <div style="position: relative; background-color: rgba(0, 0, 0, 0); width:400px; border-radius:10px ;">
-      <div class="text-center">
-        <br>
-        <p>
-          <strong
-            style="color:white ; /*background-color: black;*/ font-size: 40px; border-radius: 15%; padding: 5px;">Israel
-            Alves</strong>
-            <!-- <br><small style="color: white ; /*background-color: black;*/">Desenvolvedor e
-            técnico de tecnologia
-            da
-            informação</small> -->
-        </p>
-      </div>
-      <!-- <div class="text-center" style="display: flex; flex-direction: row; justify-content: center;">
-        <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" alt="">
-        <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="">
-        <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="">
-        <img src="https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white" alt="">
-        
-      </div> -->
-
-      <div class="text-center mt-4 pix-box">
-        <h5 class="pix-title">Apoie via Pix</h5>
-        <img src="../img/pix.jpg" class="pix-img" alt="QR Code Pix">
-        <div class="pix-copy-box mt-3">
-          <input type="text" id="pixCode" 
-            value="00020101021126580014br.gov.bcb.pix0136e01f6ef7-1695-4dd3-b9f0-29638b05acee5204000053039865802BR5921ISRAEL ALVES DE JESUS6007ARACAJU62070503***6304B272" 
-            readonly>
-          
-          <button onclick="copiarPix()">Copiar</button>
-        </div>
-        <div class="pix-aviso mt-3">
-          💡 Envie seu <strong>@ do Instagram</strong> na descrição do pagamento, pois tentarei agradecer a cada um mencionando o perfil nos meus vídeos.
-        </div>
-      </div>
-      <!-- <div class="text-center" style="display: flex; flex-wrap: wrap; justify-content: center;">
-        <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL Badge" style="max-width: 100px; max-height: 100px; margin: 5px;">
-        <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
-        <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
-        <img src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
-        <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
-        <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
-        <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
-        <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
-        <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
-        <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
-        <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
-        <img src="https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
-        <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="" style="max-width: 100px; max-height: 100px; margin: 5px;">
-      </div> -->
-      
-      
-      <!-- <div class=" d-grid gap-2 col-6 mx-auto mt-5">
-        <a href="https://github.com/Khaldewey" class="btn btn-success" target="_blank">Github</a>
-        <a href="https://www.linkedin.com/in/is-rael/" class="btn btn-success"
-          target="_blank">Linkedn</a>
-      </div>
-      <br> -->
-      <!--<div class="container">
-    <div class="row d-flex justify-content-center">
-      <div class="col-3 d-flex justify-content-center   "><a href="https://github.com/Khaldewey"><img
-            src="../img/github.png" alt="" class="img-fluid" style="border-radius: 50% ;"></a>
-      </div>
-
-
-      <div class="col-3 d-flex justify-content-center "><a
-          href="https://www.linkedin.com/in/israel-alves-de-jesus-30413a17a/"><img src="../img/images.png" alt=""
-            class="img-fluid" style="border-radius: 50%;"></a>
-      </div>
-    </div>-->
-      <!-- <br><br>
-      <div class="text-center">
-
-        <strong style="color:white ; /*background-color: black;*/ font-size: 30px;">Certificados</strong>
-      </div>
-    </div>
-  </div>
-
-  <br>
-  <div class="container">
-
-    <div class="row d-flex justify-content-center">
-      <div class="col-6">
-        <div id="carouselExampleFade" class="carousel carousel-dark slide carousel-fade border" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="../img/app-moveis.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/excel-avancado.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/c-sharp.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/design-grafico.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/excel-basico.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/excel-intermediario.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/letragem-digital.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/logica-de-programacao.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/redes-comp.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/seg-ti.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/g-fun.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/g-adm.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/g-est.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/g-seg-ti.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/g-so.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/harvard.png" class="d-block w-100" alt="...">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br> <br>
-  <div class="text-center">
-
-    <strong style="color:white ; /*background-color: black;*/ font-size: 30px;">Bootcamps</strong>
-  </div> 
-  <br>
-  <div class="container">
-
-    <div class="row d-flex justify-content-center">
-      <div class="col-6">
-        <div id="carouselExampleFade1" class="carousel carousel-dark slide carousel-fade border" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="../img/bancopan.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/linux.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/codecamp1.png" class="d-block w-100" alt="...">
-            </div> 
-            <div class="carousel-item">
-              <img src="../img/minicamp.png" class="d-block w-100" alt="...">
-            </div> 
-            <div class="carousel-item">
-              <img src="../img/angular.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/supti.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/fullstackk.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="../img/formjava.png" class="d-block w-100" alt="...">
-            </div>
-            
-            
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade1"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade1"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br><br> -->
- 
-    
-  
-  <div class="waths">
-    <a href="https://discord.gg/qAuCfqmu" target="_blank">
-      <img src="../img/discord-y.png" class="discord-btn">
+    <a href="#contato" class="nav-link">
+      <span class="lang pt">Contato</span>
+      <span class="lang en">Contact</span>
     </a>
   </div>
-  
-   
-  <script>
-    // Define the characters for the Matrix effect
-    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-  
-    // Function to generate random characters
-    function randomCharacter() {
-      return characters[Math.floor(Math.random() * characters.length)];
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <img src="../img/israel-artist.png">
+    <h1>ISRAEL ALVES</h1>
+
+    <p>
+      <span class="lang pt">Guitarrista • Produtor • Mix & Master</span>
+      <span class="lang en">Guitarist • Producer • Mix & Master</span>
+    </p>
+
+    <div class="mt-4">
+      <a href="#musicas" class="btn-green me-2">
+        <span class="lang pt">Ouvir</span>
+        <span class="lang en">Listen</span>
+      </a>
+
+      <a href="#contato" class="btn-green">
+        <span class="lang pt">Orçamento</span>
+        <span class="lang en">Get a Quote</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="section fade-in">
+  <h2>
+    <span class="lang pt">Sobre</span>
+    <span class="lang en">About</span>
+  </h2>
+
+  <p>
+    <span class="lang pt">
+Israel Alves é um guitarrista com mais de 20 anos de envolvimento com a música, iniciando sua jornada aos 10 anos no Conservatório de Música do Estado de Sergipe.
+
+Com base sólida no violão clássico, evoluiu para a guitarra de forma autodidata, desenvolvendo identidade própria.
+
+Influenciado por Buckethead, Paul Gilbert e Steve Vai, suas composições unem técnica, criatividade e expressividade.
+
+Também atua em produção musical, gravação, mixagem e masterização, integrando arte e tecnologia.
+    </span>
+
+    <span class="lang en">
+Israel Alves is a guitarist with over 20 years of involvement in music, starting his journey at age 10 at the Sergipe State Conservatory of Music.
+
+With a strong foundation in classical guitar, he evolved into electric guitar in a self-taught way, developing his own identity.
+
+Influenced by Buckethead, Paul Gilbert and Steve Vai, his compositions combine technique, creativity and expressiveness.
+
+He also works in music production, recording, mixing and mastering, integrating art and technology.
+    </span>
+  </p>
+</section>
+
+<!-- MÚSICAS -->
+<section id="musicas" class="section fade-in">
+  <h2>
+    <span class="lang pt">Últimos Lançamentos</span>
+    <span class="lang en">Latest Releases</span>
+  </h2>
+
+  <div class="spotify">
+    <iframe src="https://open.spotify.com/embed/artist/0GHRfHa4ntoG2MGmu0O8Xt"
+      width="100%" height="400" frameborder="0"
+      allow="autoplay; encrypted-media">
+    </iframe>
+  </div>
+</section>
+
+<!-- APOIE -->
+<section id="apoie" class="section fade-in text-center">
+  <h2 class="mb-3">
+    <span class="lang pt">Apoie o Projeto</span>
+    <span class="lang en">Support the Project</span>
+  </h2>
+
+  <p class="apoie-desc">
+    <span class="lang pt">
+      Ajude a fortalecer o projeto e continuar lançando novas músicas 🚀
+    </span>
+    <span class="lang en">
+      Help support the project and keep new releases coming 🚀
+    </span>
+  </p>
+
+  <a href="apoie.html" class="btn-green apoie-btn">
+    <span class="lang pt">💚 Apoiar Agora</span>
+    <span class="lang en">💚 Support Now</span>
+  </a>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="section fade-in">
+  <h2>
+    <span class="lang pt">Serviços</span>
+    <span class="lang en">Services</span>
+  </h2>
+
+  <div class="container mt-4">
+    <div class="row g-4">
+
+      <!-- PRODUÇÃO -->
+      <div class="col-md-3">
+        <div class="service-card">
+          <div class="service-front">
+            <span class="lang pt">🎸 Produção Musical</span>
+            <span class="lang en">🎸 Music Production</span>
+          </div>
+
+          <div class="service-back">
+            <span class="lang pt">
+Desenvolvimento de músicas expressivas com base sólida em teoria musical: empréstimos modais, ciclos de quarta e quinta, escalas menores harmônicas e melódicas, modulações e construção de identidade sonora.
+
+Inclui criação, arranjos, direção artística e construção completa da obra.
+            </span>
+
+            <span class="lang en">
+Development of expressive music with a strong foundation in music theory: modal interchange, circle of fourths and fifths, harmonic and melodic minor scales, modulations and sonic identity building.
+
+Includes composition, arrangements, artistic direction and full production.
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRAVAÇÃO -->
+      <div class="col-md-3">
+        <div class="service-card">
+          <div class="service-front">
+            <span class="lang pt">🎙️ Gravação</span>
+            <span class="lang en">🎙️ Recording</span>
+          </div>
+
+          <div class="service-back">
+            <span class="lang pt">
+Captação profissional de áudio com foco em qualidade e fidelidade sonora.
+            </span>
+
+            <span class="lang en">
+Professional audio recording focused on quality and fidelity.
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MIXAGEM -->
+      <div class="col-md-3">
+        <div class="service-card">
+          <div class="service-front">
+            <span class="lang pt">🎚️ Mixagem</span>
+            <span class="lang en">🎚️ Mixing</span>
+          </div>
+
+          <div class="service-back">
+            <span class="lang pt">
+Balanceamento completo da música com clareza e impacto profissional.
+            </span>
+
+            <span class="lang en">
+Full track balancing with clarity and professional impact.
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MASTER -->
+      <div class="col-md-3">
+        <div class="service-card">
+          <div class="service-front">
+            <span class="lang pt">💿 Masterização</span>
+            <span class="lang en">💿 Mastering</span>
+          </div>
+
+          <div class="service-back">
+            <span class="lang pt">
+Finalização profissional pronta para distribuição.
+            </span>
+
+            <span class="lang en">
+Professional finalization ready for distribution.
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="section fade-in">
+  <h2>
+    <span class="lang pt">Contato</span>
+    <span class="lang en">Contact</span>
+  </h2>
+
+  <p>
+    📧 <strong style="color:#00ff88;">
+      israeldejesus00@hotmail.com
+    </strong>
+  </p>
+
+  <a href="mailto:israeldejesus00@hotmail.com" class="btn-green">
+    <span class="lang pt">Solicitar Orçamento</span>
+    <span class="lang en">Request a Quote</span>
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center p-4">
+  <small>© <span id="ano"></span> Israel Alves</small>
+</footer>
+
+<!-- JS -->
+<script>
+function setLang(lang) {
+  localStorage.setItem("lang", lang);
+
+  document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+  document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'inline');
+}
+
+window.onload = () => {
+  const saved = localStorage.getItem("lang") || "pt";
+  setLang(saved);
+};
+document.getElementById("ano").textContent = new Date().getFullYear();
+function copiarPix() {
+  const input = document.getElementById("pixCode");
+
+  navigator.clipboard.writeText(input.value);
+
+  const btn = document.querySelector(".copy-btn");
+  btn.innerText = "✔";
+
+  setTimeout(() => {
+    btn.innerText = "📋";
+  }, 1500);
+}
+
+/* ANIMAÇÃO AO SCROLL */
+const elements = document.querySelectorAll('.fade-in');
+
+window.addEventListener('scroll', () => {
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 50) {
+      el.classList.add('show');
     }
-  
-    // Function to generate the Matrix effect
-    function generateMatrix() {
-      const matrixText = document.querySelector(".matrix-text");
-      const columns = Math.floor(window.innerWidth / 6);
-      const rows = Math.floor(window.innerHeight / 18);
-      let matrix = "";
-  
-      for (let i = 0; i < rows; i++) {
-        for (let j = 0; j < columns; j++) {
-          matrix += randomCharacter();
-        }
-        matrix += "<br>";
-      }
-  
-      matrixText.innerHTML = matrix;
-    }
-  
-    // Create the matrix container
-    const matrixContainer = document.createElement("div");
-    matrixContainer.className = "matrix";
-    document.body.appendChild(matrixContainer);
-  
-    // Create the matrix text element
-    const matrixText = document.createElement("div");
-    matrixText.className = "matrix-text";
-    matrixContainer.appendChild(matrixText);
-  
-    // Generate the Matrix effect and update it periodically
-    generateMatrix();
-    setInterval(generateMatrix, 150);
-  </script>
-  
-  <!-- <script type="text/javascript">
-    var canvas = document.getElementById('canvas');
-    var ctx = canvas.getContext('2d');
+  });
+});
+</script>
 
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
-
-    var texts = '0123456789'.split('');
-    var fontSize = 16;
-    var columns = canvas.width / fontSize;
-    var drops = [];
-    for (var x = 0; x < columns; x++) {
-      drops[x] = 1;
-    }
-
-    function draw() {
-      ctx.fillStyle = 'rgba(0,0,0,0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#0F0';
-      ctx.font = fontSize + 'px arial';
-      for (var i = 0; i < drops.length; i++) {
-        var text = texts[Math.floor(Math.random() * texts.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height || Math.random() > 0.95) {
-          drops[i] = 0;
-        }
-
-        drops[i]++;
-      }
-    }
-
-    setInterval(draw, 33);
-  </script> -->
-  <script>
-    function copiarPix() {
-        const input = document.getElementById("pixCode");
-        input.select();
-        input.setSelectionRange(0, 99999); // mobile
-        
-        navigator.clipboard.writeText(input.value);
-
-        alert("Código Pix copiado!");
-    }
-  </script>
-  <script src="./js/script.js"></script>
-  <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
-<div class="rodape">
-    <h4>&copy;&nbsp;Todos os direitos reservados <span id="ano"></span></h4>
- </div> 
 </html>
