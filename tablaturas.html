@@ -1,0 +1,409 @@
+  <!DOCTYPE html>
+  <html lang="pt-br">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+  content="Official guitar tabs by Israel Alves with videos, solos and Songsterr links.">
+  <title>Israel Alves | Tablaturas</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+  body{
+    background:#000;
+    color:#fff;
+    font-family:'Segoe UI',sans-serif;
+    padding-top:100px;
+  }
+
+  /* NAVBAR */
+  .navbar{
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(10px);
+  }
+
+  .nav-link{
+    color:#00ff88 !important;
+  }
+
+  /* TÍTULO */
+  .page-title{
+    text-align:center;
+    margin-bottom:40px;
+  }
+
+  /* SEARCH */
+  .search-box{
+    max-width:600px;
+    margin:0 auto 40px;
+  }
+
+  .search-input{
+    width:100%;
+    background:#111;
+    border:1px solid #222;
+    color:#fff;
+    padding:14px;
+    border-radius:10px;
+    outline:none;
+  }
+
+  .search-input:focus{
+    border-color:#00ff88;
+  }
+
+  /* TAB CARD */
+  .tab-card{
+    background:#111;
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:20px;
+    transition:0.3s;
+  }
+
+  .tab-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px rgba(0,255,136,0.15);
+  }
+
+  .tab-title{
+    font-size:20px;
+    margin-bottom:10px;
+  }
+
+  .tab-link{
+    display:inline-block;
+    margin-top:10px;
+    background:#00ff88;
+    color:#000;
+    padding:10px 18px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+  }
+
+  .tab-link:hover{
+    background:#00cc6a;
+  }
+
+  .video-box {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 15px;
+  }
+
+  .video-box iframe {
+    border-radius: 12px;
+  }
+
+  .video-thumb {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+  }
+
+  .thumb-img {
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .video-thumb:hover .thumb-img {
+    transform: scale(1.03);
+  }
+
+  .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 20px black;
+  }
+
+  footer{
+    text-align:center;
+    padding:40px 20px;
+    color:#777;
+  }
+
+  /* FILTROS */
+  .filters{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    justify-content:center;
+    margin-bottom:40px;
+  }
+
+  .filter-btn{
+    background:#111;
+    color:#aaa;
+    border:none;
+    padding:10px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+  }
+
+  .filter-btn:hover{
+    background:#222;
+    color:#fff;
+  }
+
+  .filter-btn.active{
+    background:#00ff88;
+    color:#000;
+    font-weight:bold;
+  }
+
+  .tags{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top:15px;
+  }
+
+  .tag{
+    background:#00ff88;
+    color:#000;
+    padding:5px 10px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:bold;
+  }
+  </style>
+  </head>
+
+  <body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar fixed-top navbar-dark">
+    <div class="container d-flex justify-content-center gap-4">
+
+      <a href="index.html" class="nav-link">Home</a>
+
+      <a href="tablaturas.html" class="nav-link">Tablaturas</a>
+
+      <a href="politica.html" class="nav-link">Política</a>
+
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <h1 class="page-title">🎸 Tablaturas</h1>
+
+    <!-- BUSCADOR -->
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="Search"
+        onkeyup="buscarTabs()"
+      >
+    </div>
+
+    <!-- FILTROS -->
+    <div class="filters">
+
+      <button class="filter-btn active"
+              onclick="filtrarTabs('all', this)">
+        Todos
+      </button>
+
+      <button class="filter-btn"
+              onclick="filtrarTabs('shred', this)">
+        Shred
+      </button>
+
+      <button class="filter-btn"
+              onclick="filtrarTabs('buckethead', this)">
+        Buckethead Style
+      </button>
+
+      <button class="filter-btn"
+              onclick="filtrarTabs('neo', this)">
+        Neo Classical
+      </button>
+
+      <button class="filter-btn"
+              onclick="filtrarTabs('fusion', this)">
+        Fusion
+      </button>
+
+      <button class="filter-btn"
+              onclick="filtrarTabs('ballad', this)">
+        Ballad
+      </button>
+
+      <button class="filter-btn"
+              onclick="filtrarTabs('sweep', this)">
+        Sweep Picking
+      </button>
+
+      <button class="filter-btn"
+              onclick="filtrarTabs('tapping', this)">
+        Tapping
+      </button>
+
+    </div>
+
+    <!-- LISTA -->
+    <div id="tabsList">
+
+      <!-- ITEM -->
+    <div class="tab-card" data-category="shred">
+
+      <div class="tab-title">
+        Improvisation in D Minor
+      </div>
+
+      <!-- VIDEO -->
+      <div class="video-thumb">
+
+        <a href="https://youtube.com/shorts/YUBAZVW5OBs"
+           target="_blank">
+
+          <img
+            src="https://img.youtube.com/vi/YUBAZVW5OBs/maxresdefault.jpg"
+            class="thumb-img">
+
+          <div class="play-btn">▶</div>
+
+        </a>
+
+      </div>
+      <p class="mt-3">
+        Solo improvisado em D menor disponível no Songsterr.
+      </p>
+
+      <a
+        href="https://www.songsterr.com/a/wsa/israel-alves-improvisation-in-d-minor-tab-s5153532"
+        target="_blank"
+        class="tab-link"
+      >
+        🎼 Open Tab
+      </a>
+      <div class="tags">
+          <span class="tag">Shred</span>
+      </div>
+    </div>
+
+
+  <div class="tab-card" data-category="buckethead">
+
+    <div class="tab-title">
+      If Buckethead Played with Linkin Park
+    </div>
+
+    <div class="video-thumb">
+
+      <a href="https://youtube.com/shorts/iKnpJIcNsbU"
+         target="_blank">
+
+        <img
+          src="https://img.youtube.com/vi/iKnpJIcNsbU/maxresdefault.jpg"
+          class="thumb-img">
+
+        <div class="play-btn">▶</div>
+
+      </a>
+
+    </div>
+    <p class="mt-3">
+      Buckethead Style Performance
+    </p>
+
+    <a
+      href="https://www.songsterr.com/a/wsa/isael-alves-if-buckethead-played-with-linkin-park-tab-s5152838"
+      target="_blank"
+      class="tab-link"
+    >
+      🎼 Open Tab
+    </a>
+    <div class="tags">
+      <span class="tag">Buckethead Style</span>
+    </div>
+  </div>
+
+
+
+    </div>
+
+  </div>
+
+  <footer>
+    © <span id="ano"></span> Israel Alves
+  </footer>
+
+  <script>
+  document.getElementById("ano").textContent =
+  new Date().getFullYear();
+
+  function buscarTabs() {
+
+    let input =
+    document.getElementById("searchInput").value.toLowerCase();
+
+    let cards =
+    document.querySelectorAll(".tab-card");
+
+    cards.forEach(card => {
+
+      let titulo =
+      card.querySelector(".tab-title")
+      .innerText
+      .toLowerCase();
+
+      if(titulo.includes(input)){
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+
+    });
+  }
+  </script>
+
+  <script>
+
+  function filtrarTabs(category, button){
+
+    const cards =
+    document.querySelectorAll('.tab-card');
+
+    cards.forEach(card => {
+
+      const cardCategory =
+      card.dataset.category;
+
+      if(category === 'all'
+         || cardCategory === category){
+
+        card.style.display = 'block';
+
+      } else {
+
+        card.style.display = 'none';
+
+      }
+
+    });
+
+    // remove active
+    document
+    .querySelectorAll('.filter-btn')
+    .forEach(btn => btn.classList.remove('active'));
+
+    // adiciona active
+    button.classList.add('active');
+  }
+
+  </script>
+
+  </body>
+  </html>
