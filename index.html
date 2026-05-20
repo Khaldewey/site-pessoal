@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9786051343920866"
-     crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9786051343920866" crossorigin="anonymous"></script>
 <title>Israel Alves | Music</title>
 
-<!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- STYLE -->
 <style>
 body {
   margin: 0;
@@ -48,7 +45,7 @@ body {
 
 /* SECTION */
 .section {
-  padding: 80px 20px;
+  padding: 100px 20px;
   text-align: center;
 }
 
@@ -62,16 +59,7 @@ body {
   color: #bbb;
 }
 
-/* SPOTIFY */
-.spotify {
-  max-width: 800px;
-  margin: auto;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
 /* SERVIÇOS */
-/* CARD FLIP PROFISSIONAL */
 .service-card {
   position: relative;
   height: 200px;
@@ -93,13 +81,11 @@ body {
   backface-visibility: hidden;
 }
 
-/* FRENTE */
 .service-front {
   background: #111;
   font-size: 18px;
 }
 
-/* VERSO */
 .service-back {
   background: #00ff88;
   color: #000;
@@ -107,7 +93,6 @@ body {
   font-size: 13px;
 }
 
-/* EFEITO HOVER */
 .service-card:hover .service-front {
   transform: rotateY(180deg);
 }
@@ -116,8 +101,7 @@ body {
   transform: rotateY(360deg);
 }
 
-/* PIX */
-/* APOIE INDEX */
+/* APOIE */
 .apoie-desc {
   color: #bbb;
   max-width: 500px;
@@ -130,36 +114,7 @@ body {
   margin-top: 10px;
   padding: 12px 28px;
   font-size: 16px;
-}
-
-.apoie-btn {
   text-decoration: none;
-}
-
-.apoie-btn:hover {
-  text-decoration: none;
-}
-/* GARANTE ESPAÇAMENTO ENTRE SEÇÕES */
-.section {
-  padding: 100px 20px;
-}
-
-/* BOTÃO DENTRO */
-.copy-btn {
-  position: absolute;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #00ff88;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 8px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.copy-btn:hover {
-  background: #00cc6a;
 }
 
 /* CONTATO */
@@ -182,6 +137,7 @@ body {
   padding: 12px 24px;
   border-radius: 8px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .btn-green:hover {
@@ -210,143 +166,33 @@ body {
   transform: translateY(0);
 }
 
-/* LANG */
-.lang-switch {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-
-  margin-top: 90px; /* espaço abaixo da navbar */
-  margin-bottom: 20px;
-
-  background: rgba(0,0,0,0.7);
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-
-  padding: 8px 14px;
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-.lang-btn {
-  background: #111;
-  color: #aaa;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 14px;
-}
-
-.lang-btn:hover {
-  background: #222;
-  color: #fff;
-}
-
-.lang-btn.active {
-  background: #00ff88;
-  color: #000;
-  font-weight: bold;
-  box-shadow: 0 0 10px rgba(0,255,136,0.5);
-}
-
-
-
-
-.album-container {
-  max-width: 900px;
-  margin: auto;
-}
-
-.player iframe {
-  width: 100%;
-  height: 400px;
-  border-radius: 15px;
-  margin-bottom: 20px;
-}
-
-/* TRACKLIST */
-.tracklist {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.track {
-  background: #111;
-  padding: 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: left;
-  transition: 0.3s;
-}
-
-.track:hover {
-  background: #00ff88;
-  color: #000;
-}
-
-/* ATIVO */
-.track.active {
-  background: #00ff88;
-  color: #000;
-  font-weight: bold;
-}
-
 /* SECTION MÚSICAS */
 #musicas {
   background: radial-gradient(circle at center, #0a0a0a, #000);
-}
-
-/* CONTAINER DO PLAYER */
-#musicas iframe {
-  border-radius: 20px;
-  transition: 0.4s;
-}
-
-/* EFEITO GLOW */
-#musicas iframe:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 40px rgba(0, 255, 136, 0.25);
-}
-
-/* WRAPPER CENTRAL */
-  #musicas {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* TÍTULO */
 #musicas h2 {
   margin-bottom: 30px;
   letter-spacing: 2px;
 }
 
-/* RESPONSIVO */
+#musicas iframe {
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+#musicas iframe:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(0, 255, 136, 0.25);
+}
+
 @media (max-width: 768px) {
   #musicas iframe {
     height: 300px;
   }
-}
-
-#musicas .spotify-box-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-  gap: 20px;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.spotify-box iframe {
-  width: 100%;
-  height: 352px;
-  border-radius: 12px;
 }
 </style>
 <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
@@ -356,252 +202,99 @@ body {
 
 <body>
 
-
-<!-- NAVBAR -->
 <nav class="navbar fixed-top navbar-dark">
   <div class="container d-flex justify-content-center gap-4">
-    <a href="#sobre" class="nav-link">
-      <span class="lang pt">Sobre</span>
-      <span class="lang en">About</span>
-    </a>
-
-    <a href="#musicas" class="nav-link">
-      <span class="lang pt">Músicas</span>
-      <span class="lang en">Music</span>
-    </a>
-
-    <a href="#servicos" class="nav-link">
-      <span class="lang pt">Serviços</span>
-      <span class="lang en">Services</span>
-    </a>
-
-    <a href="#apoie" class="nav-link">
-      <span class="lang pt">Apoie</span>
-      <span class="lang en">Support</span>
-    </a>
-
-    <a href="tablaturas.html" class="nav-link">
-      <span class="lang pt">Tablaturas</span>
-      <span class="lang en">Tabs</span>
-    </a>
-
-    <a href="politica.html" class="nav-link">
-      <span class="lang pt">Política</span>
-      <span class="lang en">Privacy</span>
-    </a>
-
-    <a href="#contato" class="nav-link">
-      <span class="lang pt">Contato</span>
-      <span class="lang en">Contact</span>
-    </a>
+    <a href="#sobre" class="nav-link">About</a>
+    <a href="#musicas" class="nav-link">Music</a>
+    <a href="#servicos" class="nav-link">Services</a>
+    <a href="#apoie" class="nav-link">Support</a>
+    <a href="#contato" class="nav-link">Contact</a>
   </div>
 </nav>
 
-<div class="lang-switch">
-  <button onclick="setLang('pt')" class="lang-btn active">PT</button>
-  <button onclick="setLang('en')" class="lang-btn">EN</button>
-</div>
-
-<!-- HERO -->
 <section class="hero">
   <div>
-    <img src="../img/israel-artist.png">
+    <img src="../img/israel-artist.png" alt="Israel Alves">
     <h1>ISRAEL ALVES</h1>
-
-    <p>
-      <span class="lang pt">Guitarrista • Produtor • Mix & Master</span>
-      <span class="lang en">Guitarist • Producer • Mix & Master</span>
-    </p>
-
+    <p>Guitarist • Producer • Mix & Master</p>
     <div class="mt-4">
-      <a href="#musicas" class="btn-green me-2">
-        <span class="lang pt">Ouvir</span>
-        <span class="lang en">Listen</span>
-      </a>
-
-      <a href="#contato" class="btn-green">
-        <span class="lang pt">Orçamento</span>
-        <span class="lang en">Get a Quote</span>
-      </a>
+      <a href="#musicas" class="btn-green me-2">Listen</a>
+      <a href="#contato" class="btn-green">Get a Quote</a>
     </div>
   </div>
 </section>
 
-<!-- SOBRE -->
 <section id="sobre" class="section fade-in">
-  <h2>
-    <span class="lang pt">Sobre</span>
-    <span class="lang en">About</span>
-  </h2>
-
+  <h2>About</h2>
   <p>
-    <span class="lang pt">
-        Israel Alves é um guitarrista com mais de 20 anos de envolvimento com a música, iniciando sua jornada aos 10 anos no Conservatório de Música do Estado de Sergipe.
-
-        Com base sólida no violão clássico, evoluiu para a guitarra de forma autodidata, desenvolvendo identidade própria.
-
-        Influenciado por Buckethead, Paul Gilbert e Steve Vai, suas composições unem técnica, criatividade e expressividade.
-
-        Também atua em produção musical, gravação, mixagem e masterização, integrando arte e tecnologia.
-    </span>
-
-    <span class="lang en">
-        Israel Alves is a guitarist with over 20 years of involvement in music, starting his journey at age 10 at the Sergipe State Conservatory of Music.
-
-        With a strong foundation in classical guitar, he evolved into electric guitar in a self-taught way, developing his own identity.
-
-        Influenced by Buckethead, Paul Gilbert and Steve Vai, his compositions combine technique, creativity and expressiveness.
-
-        He also works in music production, recording, mixing and mastering, integrating art and technology.
-    </span>
+    Israel Alves is a guitarist with over 20 years of involvement in music, starting his journey at age 10 at the Sergipe State Conservatory of Music.
+    With a strong foundation in classical guitar, he evolved into electric guitar in a self-taught way, developing his own identity.
+    Influenced by Buckethead, Paul Gilbert and Steve Vai, his compositions combine technique, creativity and expressiveness.
+    He also works in music production, recording, mixing and mastering, integrating art and technology.
   </p>
 </section>
 
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/0GHRfHa4ntoG2MGmu0O8Xt?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-<!-- MÚSICAS -->
-<!-- <section id="musicas" class="section fade-in">
+<section id="musicas" class="section fade-in">
+  <h2>Latest Releases</h2>
+  <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/0GHRfHa4ntoG2MGmu0O8Xt?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</section>
 
-  <h2>
-    <span class="lang pt">Últimos Lançamentos</span>
-    <span class="lang en">Latest Releases</span>
-  </h2> -->
-
-  <!-- <div class="spotify-box-container">
-    
-    <div class="spotify-box">
-      <iframe style="border-radius:12px"
-        src="https://open.spotify.com/embed/album/3V66galFktPWmrKLFcpFHt"
-        width="100%" height="352"
-        frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-      </iframe>
-    </div>
-
-    <div class="spotify-box">
-      <iframe 
-        src="https://open.spotify.com/embed/album/5F2OGelk45zGVYshg6YNVy"
-        width="100%" height="352"
-        frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-      </iframe>
-   </div>
-
-  </div> -->
-
-<!-- </section> -->
-
-<!-- APOIE -->
 <section id="apoie" class="section fade-in text-center">
-  <h2 class="mb-3">
-    <span class="lang pt">Apoie o Projeto</span>
-    <span class="lang en">Support the Project</span>
-  </h2>
-
+  <h2 class="mb-3">Support the Project</h2>
   <p class="apoie-desc">
-    <span class="lang pt">
-      Ajude a fortalecer o projeto e continuar lançando novas músicas 🚀
-    </span>
-    <span class="lang en">
-      Help support the project and keep new releases coming 🚀
-    </span>
+    Help support the project and keep new releases coming 🚀
   </p>
-
-  <a href="apoie.html" class="btn-green apoie-btn">
-    <span class="lang pt">💚 Apoiar Agora</span>
-    <span class="lang en">💚 Support Now</span>
-  </a>
+  <a href="apoie.html" class="btn-green apoie-btn">💚 Support Now</a>
 </section>
 
-<!-- SERVIÇOS -->
 <section id="servicos" class="section fade-in">
-  <h2>
-    <span class="lang pt">Serviços</span>
-    <span class="lang en">Services</span>
-  </h2>
-
+  <h2>Services</h2>
   <div class="container mt-4">
     <div class="row g-4">
 
-      <!-- PRODUÇÃO -->
       <div class="col-md-3">
         <div class="service-card">
           <div class="service-front">
-            <span class="lang pt">🎸 Produção Musical</span>
-            <span class="lang en">🎸 Music Production</span>
+            <span>🎸 Music Production</span>
           </div>
-
           <div class="service-back">
-            <span class="lang pt">
-                Desenvolvimento de músicas expressivas com base sólida em teoria musical: empréstimos modais, ciclos de quarta e quinta, escalas menores harmônicas e melódicas, modulações e construção de identidade sonora.
-
-                Inclui criação, arranjos, direção artística e construção completa da obra.
-            </span>
-
-            <span class="lang en">
-                Development of expressive music with a strong foundation in music theory: modal interchange, circle of fourths and fifths, harmonic and melodic minor scales, modulations and sonic identity building.
-
-                Includes composition, arrangements, artistic direction and full production.
+            <span>
+              Development of expressive music with a strong foundation in music theory: modal interchange, circle of fourths and fifths, harmonic and melodic minor scales, modulations and sonic identity building.
+              Includes composition, arrangements, artistic direction and full production.
             </span>
           </div>
         </div>
       </div>
 
-      <!-- GRAVAÇÃO -->
       <div class="col-md-3">
         <div class="service-card">
           <div class="service-front">
-            <span class="lang pt">🎙️ Gravação</span>
-            <span class="lang en">🎙️ Recording</span>
+            <span>🎙️ Recording</span>
           </div>
-
           <div class="service-back">
-            <span class="lang pt">
-                Captação profissional de áudio com foco em qualidade e fidelidade sonora.
-            </span>
-
-            <span class="lang en">
-                Professional audio recording focused on quality and fidelity.
-            </span>
+            <span>Professional audio recording focused on quality and fidelity.</span>
           </div>
         </div>
       </div>
 
-      <!-- MIXAGEM -->
       <div class="col-md-3">
         <div class="service-card">
           <div class="service-front">
-            <span class="lang pt">🎚️ Mixagem</span>
-            <span class="lang en">🎚️ Mixing</span>
+            <span>🎚️ Mixing</span>
           </div>
-
           <div class="service-back">
-            <span class="lang pt">
-                Balanceamento completo da música com clareza e impacto profissional.
-            </span>
-
-            <span class="lang en">
-                Full track balancing with clarity and professional impact.
-            </span>
+            <span>Full track balancing with clarity and professional impact.</span>
           </div>
         </div>
       </div>
 
-      <!-- MASTER -->
       <div class="col-md-3">
         <div class="service-card">
           <div class="service-front">
-            <span class="lang pt">💿 Masterização</span>
-            <span class="lang en">💿 Mastering</span>
+            <span>💿 Mastering</span>
           </div>
-
           <div class="service-back">
-            <span class="lang pt">
-                Finalização profissional pronta para distribuição.
-            </span>
-
-            <span class="lang en">
-                Professional finalization ready for distribution.
-            </span>
+            <span>Professional finalization ready for distribution.</span>
           </div>
         </div>
       </div>
@@ -610,94 +303,34 @@ body {
   </div>
 </section>
 
-<!-- CONTATO -->
 <section id="contato" class="section fade-in">
-  <h2>
-    <span class="lang pt">Contato</span>
-    <span class="lang en">Contact</span>
-  </h2>
-
-  <p>
-    📧 <strong style="color:#00ff88;">
-      israeldejesus00@hotmail.com
-    </strong>
-  </p>
-
-  <a href="mailto:israeldejesus00@hotmail.com" class="btn-green">
-    <span class="lang pt">Solicitar Orçamento</span>
-    <span class="lang en">Request a Quote</span>
-  </a>
+  <h2>Contact</h2>
+  <p>📧 <strong style="color:#00ff88;">israeldejesus00@hotmail.com</strong></p>
+  <a href="mailto:israeldejesus00@hotmail.com" class="btn-green">Request a Quote</a>
 </section>
 
-<!-- FOOTER -->
 <footer class="text-center p-4">
   <small>© <span id="ano"></span> Israel Alves</small>
 </footer>
 
-<!-- JS -->
 <script>
-function playMusic(videoId, element) {
-  const player = document.getElementById("playerFrame");
-
-  // troca vídeo + autoplay
-  player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-
-  // remove active de todos
-  document.querySelectorAll('.track').forEach(t => t.classList.remove('active'));
-
-  // adiciona no clicado
-  element.classList.add('active');
-}
-
-window.onload = () => {
-  const saved = localStorage.getItem("lang") || "pt";
-  setLang(saved);
-};
-
-function setLang(lang) {
-  // salva idioma
-  localStorage.setItem("lang", lang);
-
-  // troca textos
-  document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
-  document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'inline');
-
-  // REMOVE active de todos os botões
-  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-
-  // ADICIONA active no clicado
-  document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
-}
-
-window.onload = () => {
-  const saved = localStorage.getItem("lang") || "pt";
-  setLang(saved);
-};
+// Define o ano atual no footer automaticamente
 document.getElementById("ano").textContent = new Date().getFullYear();
-function copiarPix() {
-  const input = document.getElementById("pixCode");
 
-  navigator.clipboard.writeText(input.value);
-
-  const btn = document.querySelector(".copy-btn");
-  btn.innerText = "✔";
-
-  setTimeout(() => {
-    btn.innerText = "📋";
-  }, 1500);
-}
-
-/* ANIMAÇÃO AO SCROLL */
+/* ANIMAÇÃO AO SCROLL (FADE-IN) */
 const elements = document.querySelectorAll('.fade-in');
 
-window.addEventListener('scroll', () => {
+function checkScroll() {
   elements.forEach(el => {
     const top = el.getBoundingClientRect().top;
     if (top < window.innerHeight - 50) {
       el.classList.add('show');
     }
   });
-});
+}
+
+window.addEventListener('scroll', checkScroll);
+window.addEventListener('load', checkScroll); // Executa no load caso elementos já estejam na tela
 </script>
 
 </body>
